@@ -944,7 +944,7 @@ const hrProjects = [
     title: "Bank Co: Strategic Positioning for a Global Health & Wellbeing Function",
     client: "Wellbeing Culture",
     role: "Individual Project",
-    category: "Wellbeing",
+    category: "Employee Wellbeing",
     featured: false,
     summary: "An individual strategic plan, written from the perspective of a newly appointed Global Head of Health & Wellbeing, positioning wellbeing as a business-critical function at a 150,000-employee bank navigating simultaneous downsizing, digital transformation, and hybrid-work culture fragmentation.",
     challenge: "Bank Co. faced three converging risks with no dedicated wellbeing function to manage them: a downsizing program driving survivor syndrome, anxiety, and an eroded psychological contract; a digital transformation increasing cognitive load and burnout in high-value talent; and a hybrid workforce causing cultural fragmentation and always-on boundary erosion. Left unaddressed, these risks threatened to undermine the ROI of the bank's core strategic investments, from restructuring to digital rollout to global culture cohesion.",
@@ -1035,7 +1035,7 @@ const hrProjects = [
     title:"Sales Team: Wellbeing Deep Dive and Action Plan",
     client:"Workplace Wellbeing Impact & Measurement",
     role:"Group Project",
-    category:"Wellbeing",
+    category:"Employee Wellbeing",
     featured:false,
     summary:"A metrics-led sentiment diagnostic for a Sales team with 28.1% annualized attrition, identifying a collapsed Values & Ethics trust gap as the root cause and proposing a three-part intervention framework projected to deliver a 2.4x return on investment.",
     challenge:"The Sales team faced an annualized attrition rate of 28.1%, more than double the 13% tech industry benchmark, with 8 exits against only 6 hires over 9 months. The team scored lowest of any business unit on a happiness index (60.0/100) and remained trapped in persistently negative eNPS territory (-4.3 to -13.3) with no positive months. Modeled financial exposure from inaction reached €484,000 annually in excess turnover, lost productivity, and absenteeism costs.",
@@ -1336,6 +1336,112 @@ const hrProjects = [
     images:[],
     link:"https://drive.google.com/file/d/1kpCwkLHtRj2NiueoqlPmpmFAfxAO1P6E/view?usp=sharing"
   },
+{
+  title:"Unlocking Restaurant Performance Through Data",
+  client:"People Analytics",
+  role:"Group Project",
+  category:"People Analytics",
+  featured:false,
+  summary:"Used regression modeling and workforce data to identify the true drivers of restaurant performance, disproving key assumptions about talent and shift design.",
+  challenge:"A private equity-backed restaurant chain had exhausted traditional cost-cutting and marketing levers in its turnaround. Frontline turnover sat at 109% annually versus a 30% competitor benchmark, and customer satisfaction lagged at 43% versus 90% for the leading competitor.",
+  approach:[
+    "Defined three success metrics: reduce turnover 59% to the 50% industry benchmark, boost customer satisfaction 47% to match the leading competitor, and drive store-level revenue without increasing headcount.",
+    "Formed three hypotheses across talent, operations, and retention, then tested each against operational, HRIS, and third-party data (Pymetrics cognitive/personality assessments, Humanyze sociometric badges, and McKinsey Organizational Health Index survey data).",
+    "Deployed multivariate regression models, controlling for covariates like prior order volume, service mode, and time of day to isolate true performance drivers.",
+    "Engineered a custom Complexity Scoring Index to normalize order difficulty, enabling fair comparison of service speed across ticket types.",
+    "Audited and cleaned inconsistent HRIS and training data (e.g., standardizing tenure formats, excluding a training-completion metric that measured platform time rather than actual learning) to protect the integrity of the models."
+  ],
+  methods:[
+    "Multivariate Regression",
+    "Polynomial Regression",
+    "HRIS Data Integration",
+    "Bias Mitigation & Data Validation"
+  ],
+  outcome:"All three initial hypotheses were disproven by the data, redirecting strategy: shift length (not emotional intelligence or managerial tenure/pay) was the strongest driver of performance. Recommendations to shorten shifts, re-engineer hiring around 'Taskmaster' cognitive traits, and redesign variable pay around operational KPIs were projected to generate $600K–$800K in annual cost avoidance and unlock 8–12 additional orders per hour per store across a 280-store network.",
+  tags:["People Analytics", "Regression Modeling", "Workforce Planning", "Talent Acquisition", "Retail/QSR", "Data-Driven HR"],
+  images:[],
+  link:"https://drive.google.com/file/d/1a7k1XlXeHW7zSnIq_snpbPLdkf5K-75w/view?usp=sharing"
+},
+{
+  title:"Optimizing Visa Resolution Dynamics",
+  client:"People Analytics",
+  role:"Group Project",
+  category:"People Analytics",
+  featured:false,
+  summary:"Conducted an organizational network analysis of IE Student Services to map collaboration bottlenecks and single points of failure in the student visa resolution process.",
+  challenge:"IE Student Services supports 10,000+ students, 90% of whom are international, through a visa resolution process that requires tight coordination with Admissions, Financial Aid, and GEO. The team needed to understand how collaboration actually flowed across these groups during peak enrollment, and where structural bottlenecks and dependency risks were hiding.",
+  approach:[
+    "Scoped the analysis to the IE Student Services department and its critical cross-functional partners (Admissions, GEO, Financial Aid) during the Spring 2026 enrollment cycle, a 6-week peak visa intake period.",
+    "Built a custom Python pipeline using regex parsing to convert open-ended survey responses into structured network edges, and a standardize_name() function to resolve inconsistent name entries into single nodes.",
+    "Constructed a directed graph in NetworkX to reflect that collaboration isn't always reciprocal, then calculated in-degree and betweenness centrality to classify staff as Central Hubs, Knowledge Brokers, Peripheral Nodes, or Standard Nodes.",
+    "Designed and deployed an interactive Streamlit dashboard with PyVis network visualization, letting HR filter by connection frequency and see the network restructure in real time.",
+    "Built in default anonymization (hashing real identities into role-based pseudonyms) with a password-gated identity reveal for authorized HR strategy sessions, plus an algorithmic risk-profiling engine that auto-flags workload and flight-risk concerns using percentile thresholds."
+  ],
+  methods:[
+    "Organizational Network Analysis (ONA)",
+    "Centrality Analysis",
+    "Survey Data Design",
+    "Data Anonymization & Privacy Architecture"
+  ],
+  outcome:"The network revealed two employees acting as extreme central hubs (one reporting a workload manageability score of 2/10), two others functioning as unofficial 'knowledge brokers' bridging Student Services to Admissions and Financial Aid, and a critical structural risk: a student intern serving as a core knowledge broker on a short-term contract. Recommendations included building a centralized SOP repository to cut inbound hub inquiries by 25% in a quarter, establishing formal cross-functional SLAs, redistributing workload to underutilized peripheral staff, and converting the intern-broker into a permanent role to protect institutional knowledge ahead of the next peak cycle.",
+  tags:["Organizational Network Analysis", "People Analytics", "HR Operations", "Workforce Planning", "Data Visualization"],
+  images:[],
+  link:"https://people-analytics-ona-dashboard-544351414258.europe-west2.run.app/"
+},
+{
+  title:"Understanding and Reducing Employee Attrition",
+  client:"People Analytics.",
+  role:"Group Project",
+  category:"People Analytics",
+  featured:false,
+  summary:"Built a predictive attrition model for a tech company losing $13.8M annually to turnover, identifying overtime and compensation as the strongest flight-risk drivers.",
+  challenge:"TechSolutions Inc. faced a 16.1% baseline attrition rate, costing an estimated $13.8M annually in replacement costs. The company needed to understand what was actually driving departures across 1,470 employee records, and identify which interventions would move the needle rather than guessing based on demographics.",
+  approach:[
+    "Cleaned and prepared the dataset: dropped zero-variance fields, one-hot encoded categorical variables like Department and Job Role, applied feature scaling, and confirmed zero null values across all 1,470 records.",
+    "Used mutual information scores and point-biserial correlation to isolate the features with real predictive signal before modeling.",
+    "Deployed a Random Forest Classifier (150 decision trees) with class-imbalance correction to address the 84%/16% stayer-leaver skew, outperforming a Logistic Regression baseline.",
+    "Prioritized Recall over raw accuracy in model tuning, since missing a true leaver (a false negative) costs far more than a false positive that merely triggers a manager check-in.",
+    "Defined a multi-factor 'departure risk cohort' (R&D/Sales, junior level, under $3,200/month, working overtime, under 5 years tenure) to give HR a concrete, actionable profile rather than a black-box score.",
+    "Built and deployed a live flight-risk simulation dashboard so HR could explore the predictive model directly."
+  ],
+  methods:[
+    "Random Forest Classifier",
+    "Logistic Regression",
+    "Predictive Modeling",
+    "Python"
+  ],
+  outcome:"The model correctly flagged 79.6% of actual leavers in unseen validation data at 84.1% test accuracy, with only a modest train/test gap indicating limited overfitting. Analysis showed overtime was the single strongest predictor (a 30.5% attrition rate vs. a 10.1% baseline, roughly 3x), and identified a five-factor high-risk cohort representing the majority of expected departures. Recommended interventions, overtime caps, junior salary benchmarking, a restructured 90-day onboarding program, and manager-led stay interviews, were projected to recover approximately $2.8M annually through a targeted 20% reduction in attrition.",
+  tags:["People Analytics", "Predictive Modeling", "Attrition", "Machine Learning", "HR Strategy", "Workforce Planning"],
+  images:[],
+  link:"https://ai.studio/apps/5de96160-c97b-4661-a92a-d5eb8840d8c8"
+},
+{
+  title:"High Turnover on the Innovation Team",
+  client:"Workplace Well-being Impact & Measurement",
+  role:"Group Project",
+  category:"Employee Wellbeing",
+  featured:false,
+  summary:"Investigated a wellbeing and retention crisis on an Innovation team with 33.3% annualized turnover, building a business case for a targeted intervention program.",
+  challenge:"An Innovation team was showing 33.3% annualized turnover, 2.6x above the 13% industry benchmark, with 13 voluntary exits against only 5 new hires in nine months. Wellbeing scores and engagement (eNPS) had been declining for months, and leadership needed a data-backed case for intervention, not just a diagnosis.",
+  approach:[
+    "Analyzed six months of Happiness Index, eNPS, and driver-score trends, identifying Reward & Recognition as the fastest-declining driver, with its Compensation sub-driver collapsing from 5.6 to 1.8.",
+    "Benchmarked Innovation's pay ratio against market and against other departments, finding Innovation lagged well behind HR, Marketing, and Sales.",
+    "Cross-referenced quantitative trends with qualitative exit interview data and employee quotes to confirm compensation and workload as the two root causes, rather than relying on survey scores alone.",
+    "Tracked secondary burnout indicators (wellbeing score, unscheduled absences, EAP utilization) to show how declining pay and rising workload were reinforcing each other in a feedback loop.",
+    "Built a full cost-of-inaction model (excess turnover, lost productivity, absenteeism) and compared it against a proposed intervention budget to calculate ROI and payback period.",
+    "Designed a three-part intervention program (pay equity audit, workload/capacity audit, peer recognition redesign) with specific KPIs and an evaluation cadence for tracking impact."
+  ],
+  methods:[
+    "Engagement & Driver-Score Analysis",
+    "Cost-of-Inaction Modeling",
+    "ROI / Business Case Development",
+    "KPI Design"
+  ],
+  outcome:"Quantified the annual cost of inaction at approximately €755,000 (excess turnover, lost productivity, and absenteeism combined) against a proposed €100K–€130K intervention program, a return multiple of 2.4x–6.0x with payback in well under 12 months. Recommendations, an immediate pay equity audit, a workload/capacity audit with mandatory recovery time, and a peer-to-peer recognition redesign, were positioned as a board-ready case for approval, with specific KPIs (compensation driver score, absenteeism rate, turnover vs. benchmark, peer recognition participation) to track post-implementation.",
+  tags:["Employee Wellbeing", "Retention", "Engagement Analytics", "Business Case Development", "Compensation", "Burnout"],
+  images:[],
+  link:"https://drive.google.com/file/d/1ET3eKf2VVMlRJgIXIR53P2ELQ9Ncufyt/view?usp=sharing"
+},
 ];
 
 const allProjects = [...consultingProjects, ...hrProjects];
