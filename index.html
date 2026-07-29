@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Megann Simms Ehrlich | Talent Development & Human Resources</title>
+<meta name="description" content="Portfolio of Megann (Simms) Ehrlich, Master's graduate in Talent Development & Human Resources from IE Business School. HR consulting projects, experience, and education." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Megann Simms Ehrlich | Talent Development & HR" />
+<meta property="og:description" content="HR & talent strategy portfolio: onboarding design, talent acquisition, EVP, and AI-driven workforce planning." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://simmsehrlich-png.github.io/portfolio/" />
+<meta property="og:image" content="https://simmsehrlich-png.github.io/portfolio/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Megann Simms Ehrlich | Talent Development & HR" />
+<meta name="twitter:description" content="HR & talent strategy portfolio: onboarding design, talent acquisition, EVP, and AI-driven workforce planning." />
+<meta name="twitter:image" content="https://simmsehrlich-png.github.io/portfolio/og-image.png" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B2545'/><text x='50' y='68' font-size='52' font-family='Montserrat,Arial' font-weight='700' fill='%235DA9E9' text-anchor='middle'>SE</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!--
+  ============================================================================
+  HOW TO ADD A PROJECT  (you have many, this is the only thing you edit)
+  ============================================================================
+  Consulting projects live in `const consultingProjects`; your other
+  Master's projects go in `const hrProjects` (further down).
+  Copy one block, paste it, and fill in the fields. Field guide:
+
+    title        : Project name (string)
+    client       : Organization / company (string)
+    sector       : Industry, e.g. "Pharma", "Retail" (string)
+    role         : Your role on the project (string)
+    dateStart    : "YYYY-MM"  e.g. "2025-09"
+    dateEnd      : "YYYY-MM" or "present"
+    category     : Groups + filters the project. Reuse exact spelling to group.
+    featured     : true / false  (true = also shown in the Featured row + home)
+    summary      : One sentence shown on the card
+    challenge    : The problem / brief (string)
+    approach     : What you did, an array of bullet strings  [ "...", "..." ]
+    methods      : Tools / frameworks, an array of short strings  [ "...", "..." ]
+    outcome      : The result / impact (string)
+    tags         : array of short keyword strings (also searchable)
+    images       : optional array of image paths/URLs shown in the detail view
+    link         : optional external URL ("" if none)
+
+  Categories and tags appear automatically in the filters once used.
+  ============================================================================
+-->
+
+<style>
+  :root{
+    --navy-deep:#0B2545;
+    --navy:#13315C;
+    --blue:#1E6FB8;
+    --sky:#5DA9E9;
+    --sky-light:#A9D6F5;
+    --paper:#F6FAFD;
+    --white:#FFFFFF;
+    --ink:#0B2545;
+    --muted:#5A6B82;
+    --line:#DBE6F1;
+    --shadow:0 1px 2px rgba(11,37,69,.06), 0 12px 28px rgba(11,37,69,.08);
+    --shadow-sm:0 1px 2px rgba(11,37,69,.06), 0 6px 16px rgba(11,37,69,.06);
+    --radius:14px;
+    --maxw:1140px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Poppins',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--navy-deep);line-height:1.15;margin:0;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{color:var(--navy);}
+  img{max-width:100%;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'Montserrat',sans-serif;font-weight:600;font-size:.72rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.02rem;color:var(--navy-deep);letter-spacing:.01em;}
+  .brand span{color:var(--blue);}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{
+    font-size:.86rem;font-weight:500;color:var(--navy);font-family:'Montserrat',sans-serif;
+  }
+  .nav-links a:hover{color:var(--blue);}
+  .nav-cta{
+    background:var(--navy-deep);color:#fff !important;padding:9px 18px;border-radius:999px;
+    font-size:.82rem;
+  }
+  .nav-cta:hover{background:var(--blue);}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;color:var(--navy-deep);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 78% -10%, rgba(93,169,233,.55), transparent 60%),
+      linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 48%, var(--blue) 130%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .hero:after{
+    content:"";position:absolute;right:-120px;bottom:-160px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle at center, rgba(169,214,245,.18), transparent 65%);
+  }
+  .hero-inner{padding:96px 24px 88px;position:relative;z-index:2;}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;letter-spacing:-.02em;}
+  .hero .headline{
+    color:var(--sky-light);font-family:'Montserrat',sans-serif;font-weight:600;
+    font-size:clamp(1rem,2.4vw,1.3rem);margin-top:18px;max-width:760px;
+  }
+  .hero .lede{color:#D7E6F5;font-size:1.06rem;max-width:640px;margin-top:22px;font-weight:300;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .pill{
+    border:1px solid rgba(169,214,245,.4);color:var(--sky-light);
+    padding:6px 14px;border-radius:999px;font-size:.8rem;font-family:'Montserrat',sans-serif;font-weight:500;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:999px;
+    font-family:'Montserrat',sans-serif;font-weight:600;font-size:.9rem;cursor:pointer;border:0;
+    transition:transform .15s ease, background .2s ease, color .2s ease;
+  }
+  .btn-primary{background:var(--sky);color:var(--navy-deep) !important;}
+  .btn-primary:hover{background:var(--sky-light);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:#fff !important;border:1px solid rgba(255,255,255,.45);}
+  .btn-ghost:hover{border-color:var(--sky);color:var(--sky-light) !important;transform:translateY(-2px);}
+
+  .hero-stats{
+    display:flex;flex-wrap:wrap;gap:40px;margin-top:54px;padding-top:30px;
+    border-top:1px solid rgba(169,214,245,.22);
+  }
+  .stat .n{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.9rem;color:#fff;}
+  .stat .l{color:#B9D2EC;font-size:.82rem;margin-top:2px;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:680px;margin-bottom:46px;}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;letter-spacing:-.01em;}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.02rem;}
+  .bg-paper{background:var(--paper);}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:54px;align-items:start;}
+  .about-grid p{color:#33425a;font-size:1.06rem;margin:0 0 18px;}
+  .about-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);
+  }
+  .about-card h4{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:18px;font-weight:600;}
+  .fact{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.92rem;}
+  .fact:last-child{border-bottom:0;}
+  .fact .k{color:var(--muted);min-width:96px;font-weight:400;}
+  .fact .v{color:var(--navy-deep);font-weight:500;}
+
+  /* ---------- PORTFOLIO ---------- */
+  .controls{
+    display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    margin-bottom:26px;
+  }
+  .search-wrap{position:relative;flex:1;min-width:240px;max-width:420px;}
+  .search-wrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);}
+  #search{
+    width:100%;padding:13px 16px 13px 44px;border:1px solid var(--line);border-radius:999px;
+    font-family:'Poppins',sans-serif;font-size:.92rem;background:#fff;color:var(--ink);
+  }
+  #search:focus{outline:2px solid var(--sky);border-color:transparent;}
+  .sort-wrap{display:flex;align-items:center;gap:9px;}
+  .sort-wrap label{font-size:.82rem;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:500;}
+  #sort{
+    padding:11px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;
+    font-family:'Poppins',sans-serif;font-size:.88rem;color:var(--ink);cursor:pointer;
+  }
+  #sort:focus{outline:2px solid var(--sky);}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+  .chip{
+    border:1px solid var(--line);background:#fff;color:var(--navy);
+    padding:8px 16px;border-radius:999px;font-family:'Montserrat',sans-serif;font-weight:500;
+    font-size:.82rem;cursor:pointer;transition:all .16s ease;
+  }
+  .chip:hover{border-color:var(--sky);color:var(--blue);}
+  .chip.active{background:var(--navy-deep);color:#fff;border-color:var(--navy-deep);}
+  .count{font-size:.84rem;color:var(--muted);margin-bottom:22px;font-family:'Montserrat',sans-serif;}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+    cursor:pointer;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    position:relative;overflow:hidden;
+  }
+  .card:before{
+    content:"";position:absolute;left:0;top:0;height:4px;width:100%;
+    background:linear-gradient(90deg,var(--sky),var(--blue));transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--sky-light);}
+  .card:hover:before{transform:scaleX(1);}
+  .card:focus-visible{outline:2px solid var(--sky);outline-offset:3px;}
+  .card .cat{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:600;font-family:'Montserrat',sans-serif;}
+  .card h3{font-size:1.16rem;font-weight:700;margin:12px 0 4px;}
+  .card .client{color:var(--muted);font-size:.84rem;margin-bottom:14px;font-weight:400;}
+  .card .sum{color:#3a495f;font-size:.92rem;flex:1;}
+  .card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+  .tag{background:var(--paper);color:var(--blue);border:1px solid var(--line);font-size:.72rem;padding:4px 10px;border-radius:999px;font-weight:400;}
+  .star{position:absolute;top:18px;right:18px;color:var(--sky);}
+  .empty{text-align:center;color:var(--muted);padding:60px 0;font-size:1rem;grid-column:1/-1;}
+
+  /* ---------- MODAL ---------- */
+  .modal-bg{
+    position:fixed;inset:0;background:rgba(11,37,69,.55);backdrop-filter:blur(4px);
+    display:none;align-items:flex-start;justify-content:center;z-index:100;padding:40px 20px;overflow-y:auto;
+  }
+  .modal-bg.open{display:flex;}
+  .modal{
+    background:#fff;max-width:680px;width:100%;border-radius:18px;padding:40px;
+    box-shadow:0 30px 80px rgba(11,37,69,.4);position:relative;animation:rise .25s ease;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+  .modal .close{
+    position:absolute;top:20px;right:20px;background:var(--paper);border:1px solid var(--line);
+    width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.2rem;color:var(--navy);line-height:1;
+  }
+  .modal .close:hover{background:var(--sky-light);}
+  .modal .cat{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;font-family:'Montserrat',sans-serif;}
+  .modal h2{font-size:1.7rem;font-weight:700;margin:10px 0 6px;}
+  .modal .meta{color:var(--muted);font-size:.9rem;margin-bottom:24px;}
+  .modal h4{
+    font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);
+    font-weight:600;margin:24px 0 10px;font-family:'Montserrat',sans-serif;
+  }
+  .modal p{color:#33425a;font-size:.98rem;margin:0;}
+  .modal ul{margin:0;padding-left:20px;color:#33425a;font-size:.96rem;}
+  .modal ul li{margin-bottom:7px;}
+  .modal .methods{display:flex;flex-wrap:wrap;gap:8px;}
+  .modal .outcome{
+    background:linear-gradient(135deg,var(--paper),#fff);border:1px solid var(--line);
+    border-left:4px solid var(--sky);border-radius:10px;padding:16px 18px;margin-top:8px;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;max-width:820px;}
+  .timeline:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--sky-light),var(--sky),var(--navy));}
+  .tl-item{position:relative;padding:0 0 38px 42px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item:before{content:"";position:absolute;left:2px;top:5px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--sky);}
+  .tl-item .when{font-size:.78rem;color:var(--blue);font-weight:600;font-family:'Montserrat',sans-serif;letter-spacing:.04em;}
+  .tl-item h3{font-size:1.12rem;font-weight:700;margin:5px 0 2px;}
+  .tl-item .org{color:var(--navy);font-weight:500;font-size:.94rem;}
+  .tl-item .org span{color:var(--muted);font-weight:300;}
+  .tl-item p{color:#3a495f;font-size:.94rem;margin:9px 0 0;}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .edu-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);}
+  .edu-card .when{font-size:.78rem;color:var(--blue);font-weight:600;font-family:'Montserrat',sans-serif;}
+  .edu-card h3{font-size:1.2rem;font-weight:700;margin:8px 0 4px;}
+  .edu-card .deg{color:var(--navy);font-weight:500;font-size:.96rem;margin-bottom:12px;}
+  .edu-card p{color:#3a495f;font-size:.9rem;margin:0;}
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .skill-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm);}
+  .skill-block h4{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:16px;}
+  .skill-block .chips-static{display:flex;flex-wrap:wrap;gap:9px;}
+  .skill-block .s{background:var(--paper);border:1px solid var(--line);color:var(--navy);font-size:.84rem;padding:7px 14px;border-radius:999px;font-weight:400;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:linear-gradient(150deg,var(--navy-deep),var(--navy) 70%, var(--blue));color:#fff;border-radius:24px;
+    padding:60px 48px;text-align:center;position:relative;overflow:hidden;
+  }
+  .contact:after{content:"";position:absolute;left:-80px;top:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(93,169,233,.25),transparent 65%);}
+  .contact h2{color:#fff;font-size:clamp(1.7rem,4vw,2.4rem);position:relative;z-index:2;}
+  .contact p{color:#CFE2F4;max-width:520px;margin:16px auto 30px;position:relative;z-index:2;}
+  .contact-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
+  .foot-inner p{color:var(--muted);font-size:.84rem;margin:0;}
+  .foot-links{display:flex;gap:20px;}
+  .foot-links a{font-size:.84rem;color:var(--navy);font-family:'Montserrat',sans-serif;font-weight:500;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- PHOTOS ---------- */
+  .hero-grid{display:grid;grid-template-columns:1.45fr .85fr;gap:54px;align-items:center;}
+  .hero-photo{justify-self:end;}
+  .hero-photo img{
+    width:100%;max-width:340px;aspect-ratio:3/4;object-fit:cover;border-radius:20px;
+    border:1px solid rgba(169,214,245,.35);box-shadow:0 22px 55px rgba(0,0,0,.38);display:block;
+  }
+  .about-right{display:flex;flex-direction:column;gap:22px;}
+  .about-photo img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);
+    border:1px solid var(--line);box-shadow:var(--shadow-sm);display:block;
+  }
+  .modal-gallery{display:grid;grid-template-columns:1fr;gap:12px;margin-top:6px;}
+  .modal-gallery img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;}
+  .grad-gallery{display:grid;grid-template-columns:1fr 1.4fr;grid-auto-rows:200px;gap:14px;margin-top:40px;}
+  .grad-gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:block;}
+  .grad-gallery .tall{grid-row:span 2;}
+  .curve-note{margin-top:26px;font-size:.86rem;color:var(--muted);font-style:italic;max-width:780px;line-height:1.55;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:32px;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .edu-grid,.skill-grid{grid-template-columns:1fr;}
+    .grad-gallery{grid-template-columns:1fr;grid-auto-rows:auto;}
+    .grad-gallery img{height:auto;}
+    .grad-gallery .tall{grid-row:auto;}
+  }
+  @media(max-width:680px){
+    .nav-links{
+      display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;
+      gap:0;border-bottom:1px solid var(--line);padding:8px 0;box-shadow:var(--shadow);
+    }
+    .nav-links.show{display:flex;}
+    .nav-links a{padding:13px 24px;width:100%;}
+    .nav-cta{margin:8px 24px;text-align:center;}
+    .menu-btn{display:block;}
+    .grid{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+    .hero-inner{padding:72px 24px 64px;}
+    .modal{padding:28px 22px;}
+    .contact{padding:44px 24px;}
+  }
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:26px;}
+    .hero-photo{order:-1;justify-self:start;}
+    .hero-photo img{max-width:190px;aspect-ratio:3/4;border-radius:16px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">Simms <span>Ehrlich</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="wrap hero-inner">
+    <div class="hero-grid">
+      <div class="hero-text">
+    <div class="eyebrow" style="color:var(--sky-light);">Talent Development &amp; Human Resources</div>
+    <h1>Megann Simms Ehrlich</h1>
+    <p class="headline">Shaping the strategy and systems that help people and organizations grow.</p>
+    <p class="lede">Master's graduate in Talent Development &amp; Human Resources from IE Business School</p>
+
+    <div class="hero-meta">
+      <span class="pill">📍 Madrid → Austin, TX</span>
+      <span class="pill">🎓 IE Foundation Fellow</span>
+      <span class="pill">🗣️ Bilingual EN / ES</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn btn-primary">View my portfolio</a>
+      <a href="mailto:simms.ehrlich@gmail.com" class="btn btn-ghost">Email me</a>
+      <a href="https://www.linkedin.com/in/simms-ehrlich" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+
+      </div><!-- /hero-text -->
+      <div class="hero-photo"><img src="hero-portrait.jpg" alt="Portrait of Megann Simms Ehrlich" /></div>
+    </div><!-- /hero-grid -->
+
+    <div class="hero-stats">
+      <div class="stat"><div class="n">SHRM-CP</div><div class="l">Certified June 2026</div></div>
+      <div class="stat"><div class="n">Spanish</div><div class="l">DELE C1 Certified</div></div>
+      <div class="stat"><div class="n">3 Years</div><div class="l">in Madrid, Spain</div></div>
+      <div class="stat"><div class="n">Texas Ex</div><div class="l">Class of 2023</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-paper">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:22px;">People strategy, grounded in evidence</h2>
+        <p>I'm a Master's graduate in Talent Development &amp; Human Resources from IE Business School. Over the past three years I've lived, worked, and studied in Madrid, building experience across human resources, consulting, and education.</p>
+        <p>My corporate consulting projects at IE have spanned graduate onboarding redesign, employer value proposition (EVP) and talent-market analysis, and AI-driven workforce planning for global organizations, including Inditex. Before graduate school, I supported organizational strategy through data analysis for an Austin-based nonprofit and taught English in a Madrid primary school for two years.</p>
+        <p>Whether embedded on an internal HR team or advising as a consultant, I bring the same toolkit: evidence, structure, and a focus on the employee experience. I passed the SHRM-CP exam in June 2026, and I'm seeking an HR consulting or HR generalist role in Austin, TX, with a long-term interest in HR business partnership and strategic talent management.</p>
+      </div>
+      <div class="about-right">
+      <div class="about-photo"><img src="about-photo.jpg" alt="Megann Simms Ehrlich working during a session at IE Business School" /></div>
+      <div class="about-card">
+        <h4>At a glance</h4>
+        <div class="fact"><span class="k">Focus</span><span class="v">Talent development &amp; HR strategy</span></div>
+        <div class="fact"><span class="k">Have studied</span><span class="v">Master's in Talent Development &amp; Human Resources</span></div>
+        <div class="fact"><span class="k">Seeking</span><span class="v">HR consulting or HR generalist role in Austin, TX</span></div>
+        <div class="fact"><span class="k">Languages</span><span class="v">English (native), Spanish (advanced proficiency)</span></div>
+        <div class="fact"><span class="k">Status</span><span class="v">U.S. citizen, work authorized</span></div>
+      </div>
+      </div><!-- /about-right -->
+    </div>
+  </div>
+</section>
+
+<!-- TALENT CONSULTING PROJECTS -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Master's Portfolio</div>
+      <h2>Talent Consulting Projects</h2>
+      <p>Corporate consulting projects from my Master's at IE Business School. Open any project for the full brief, approach, and outcome.</p>
+    </div>
+    <div class="grid" id="consulting-grid"></div>
+  </div>
+</section>
+
+<!-- SELECTED HR PROJECTS -->
+<section id="hr-projects" class="bg-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Master's Portfolio</div>
+      <h2>Selected HR Projects</h2>
+      <p>Coursework and applied HR projects from my Master's. Search by keyword, filter by focus area, and open any project for detail.</p>
+    </div>
+
+    <div class="controls reveal">
+      <div class="search-wrap">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M17 17l-4-4"/></svg>
+        <input type="search" id="search" placeholder="Search projects, clients, or skills…" aria-label="Search HR projects" />
+      </div>
+    </div>
+
+    <div class="chips reveal" id="chips"></div>
+    <div class="count reveal" id="count"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience</div>
+      <h2>Professional Background</h2>
+      <p>A path across consulting, education, and the social sector, in Texas and in Spain.</p>
+    </div>
+    <div class="timeline reveal" id="timeline"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="bg-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Education</div>
+      <h2>Academic Foundation</h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="when">Sep 2025 – Jul 2026</div>
+        <h3>IE Business School</h3>
+        <div class="deg">Master in Talent Development &amp; Human Resources · Madrid, Spain · GPA 3.68/4.00</div>
+        <p>IE Foundation Fellow: awarded honors distinction and scholarship for academic excellence, leadership, and social initiative.</p>
+      </div>
+      <div class="edu-card">
+        <div class="when">Aug 2019 – May 2023</div>
+        <h3>The University of Texas at Austin</h3>
+        <div class="deg">B.A. Human Dimensions of Organizations, with Honors · GPA 3.89/4.00</div>
+        <p>Minor in Business Foundations; certificates in Spanish for Business and in Social Entrepreneurship &amp; Nonprofits. University Honors and College Scholar.</p>
+      </div>
+    </div>
+    <p class="curve-note reveal">Note: IE grades on a forced curve within each section, with passing grades set at four fixed levels: Honors (4.00, top 15%), Excellence (3.66, next 35%), Proficiency (3.33, next 35%), and Pass (3.00, bottom 15%).</p>
+    <div class="grad-gallery reveal">
+      <img class="tall" src="graduation-diploma.jpg" alt="Megann Simms Ehrlich receiving her Master's diploma at the IE University graduation ceremony" />
+      <img src="graduation-class.jpg" alt="Megann Simms Ehrlich with her IE Business School graduating class in front of a Ready for the Future backdrop" />
+      <img src="graduation-captoss.jpg" alt="Cap toss at the IE University graduation ceremony" />
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2>What I Bring to a Team</h2>
+    </div>
+    <div class="skill-grid reveal">
+      <div class="skill-block">
+        <h4>Core HR &amp; Talent Expertise</h4>
+        <div class="chips-static">
+          <span class="s">Corporate Coaching</span><span class="s">Employee Relations</span>
+          <span class="s">Employee Wellbeing</span><span class="s">HR Operations &amp; Systems</span>
+          <span class="s">Inclusion &amp; Diversity</span><span class="s">Learning &amp; Development</span>
+          <span class="s">Organizational &amp; Human Behavior</span><span class="s">Talent Management</span>
+          <span class="s">Workforce Planning</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Hard &amp; Soft Skills</h4>
+        <div class="chips-static">
+          <span class="s">Active Listening</span><span class="s">Adaptability</span>
+          <span class="s">Conflict Resolution</span><span class="s">Dedication</span>
+          <span class="s">Discretion</span><span class="s">Effective Communication</span>
+          <span class="s">Emotional Intelligence</span><span class="s">Empathy</span>
+          <span class="s">Excel</span><span class="s">Generative AI Tools</span>
+          <span class="s">Google Workspace</span><span class="s">HR Analytics</span>
+          <span class="s">Leadership</span><span class="s">Microsoft 365</span>
+          <span class="s">Organization</span><span class="s">Patience</span>
+          <span class="s">Power BI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Let's talk talent</h2>
+      <p>I'm seeking an HR consulting or HR generalist role in Austin, TX. If that sounds like a fit, I'd love to connect.</p>
+      <div class="contact-btns">
+        <a href="mailto:simms.ehrlich@gmail.com" class="btn btn-primary">simms.ehrlich@gmail.com</a>
+        <a href="tel:+15124663044" class="btn btn-ghost">+1 (512) 466-3044</a>
+        <a href="https://www.linkedin.com/in/simms-ehrlich" target="_blank" rel="noopener" class="btn btn-ghost">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <p>© <span id="year"></span> Megann Simms Ehrlich</p>
+    <div class="foot-links">
+      <a href="mailto:simms.ehrlich@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/simms-ehrlich" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#portfolio">Portfolio</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg" role="dialog" aria-modal="true">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+/* =========================================================================
+   PROJECTS: the three consulting projects below. See top of file
+   for the field guide. Categories & tags appear in the filters automatically.
+   ========================================================================= */
+const consultingProjects = [
+  {
+    title:"Onboarding Redesign for a Graduate-Hire Cohort",
+    client:"Tabacalera",
+    sector:"Tobacco",
+    role:"HR Consulting Project · IE Business School",
+    dateStart:"2025-10", dateEnd:"2025-12",
+    category:"Onboarding & Employee Experience",
+    featured:true,
+    summary:"Rebuilt the onboarding journey for new graduate hires into a structured 12-week program with embedded feedback and performance checkpoints.",
+    challenge:"Tabacalera's graduate-hire onboarding lacked structure and clear milestones, leaving new joiners without consistent support or measurable early performance signals.",
+    approach:[
+      "Ran a gap analysis of the existing onboarding experience against new-hire needs.",
+      "Benchmarked onboarding practices across comparable organizations.",
+      "Designed a structured 12-week integration journey with embedded feedback loops.",
+      "Built in 30/60/90-day performance checkpoints to track ramp-up."
+    ],
+    methods:["Gap analysis","Benchmarking","Journey mapping","30/60/90 framework"],
+    outcome:"A ready-to-deploy 12-week onboarding program with feedback loops and milestone checkpoints designed to improve new-hire ramp-up and retention.",
+    tags:["Onboarding","Employee experience","Gap analysis","Benchmarking"],
+    images:["hr-ops-project.jpg"],
+    link:""
+  },
+  {
+    title:"Global Talent Pipeline & Market-Entry Strategy",
+    client:"Anabion",
+    sector:"Pharmaceuticals",
+    role:"HR Consulting Project · IE Business School",
+    dateStart:"2026-01", dateEnd:"2026-03",
+    category:"Talent Management",
+    featured:true,
+    summary:"Built a global talent pipeline and market-entry strategy for a scaling pharma company across five emerging markets in EMEA and APAC.",
+    challenge:"A scaling pharmaceutical company needed to enter five new markets but lacked a talent acquisition infrastructure and employer positioning to attract candidates abroad.",
+    approach:[
+      "Built a global talent pipeline strategy across five emerging EMEA and APAC markets.",
+      "Delivered applicant tracking system (ATS) recommendations to support scaling.",
+      "Developed EVP positioning tailored to the company's growth story.",
+      "Conducted candidate sourcing analysis by market."
+    ],
+    methods:["Talent pipelining","EVP positioning","ATS evaluation","Sourcing analysis"],
+    outcome:"A market-entry talent strategy spanning five regions, with ATS guidance and EVP positioning to support international hiring.",
+    tags:["Talent acquisition","EVP","Market entry","Sourcing","ATS"],
+    images:["project-gallery-2.jpg"],
+    link:""
+  },
+  {
+    title:"AI-Driven Workforce Transformation for Global IT",
+    client:"Inditex",
+    sector:"Retail",
+    role:"HR Consulting Project · IE Business School",
+    dateStart:"2026-04", dateEnd:"2026-06",
+    category:"AI & Automation",
+    featured:true,
+    summary:"Designed an AI-driven workforce transformation strategy for a global IT function of ~5,800 people, in partnership with tech HR business partners.",
+    challenge:"Inditex's global IT function (~5,800 employees and collaborators) faces rapid change from AI adoption, requiring a forward-looking workforce and organizational strategy.",
+    approach:[
+      "Designed an AI-driven workforce transformation strategy for the global IT function.",
+      "Developed organizational redesign recommendations.",
+      "Built talent attraction and retention strategies for technical talent.",
+      "Partnered directly with technology HR business partners (HRBPs)."
+    ],
+    methods:["Workforce planning","Org design","AI strategy","HRBP partnership"],
+    outcome:"Delivered a workforce transformation roadmap covering org redesign, talent attraction, and retention for a ~5,800-person global IT organization.",
+    tags:["Workforce planning","AI","Org design","Retention","Technology"],
+    images:["project-gallery-3.jpg"],
+    link:""
+  }
+
+];
+
+/* =========================================================================
+   SELECTED HR PROJECTS: add your other Master's class / coursework
+   projects here (you have many). Copy the TEMPLATE block, paste it inside
+   the [ ], and fill in. New categories & tags appear in the
+   "Selected HR Projects" filters automatically.
+   ========================================================================= */
+const hrProjects = [
+
+  {
+  title: "TalentAI: Agentic Recruitment Assistant",
+  client: "Agentic AI for HR",
+  role: "Group Project",
+  category: "AI & Automation",
+  featured: false,
+  summary: "Built an AI agent that automates resume screening and candidate follow-up emails, cutting manual recruiter workload.",
+  challenge: "Recruiters spend 30-90 seconds per resume and 2-6 hours manually screening ~250 applications per vacancy, leading to slow, inconsistent hiring decisions.",
+  approach: [
+    "Applied the SALT framework (Simplify, Automate, Learn, Transform) to redesign the recruitment workflow",
+    "Built an n8n automation pipeline: job posting form → GPT-4.1 extracts requirements → CV parsing → automated match scoring",
+    "Wrote a structured prompt contract forcing the model to output strict JSON (decision, matchScore, reasons, email) to eliminate unreliable free-text outputs",
+    "Designed a human-in-the-loop gate for borderline match scores (55–70) so recruiters approve/edit AI decisions before anything is sent",
+    "Set up automated Gmail follow-up emails with separate templates for 'advance' vs 'reject' outcomes"
+  ],
+  methods: ["n8n", "GPT-4.1", "Prompt Engineering", "Gmail API", "Google Sheets", "SALT Framework", "McKinsey 7S"],
+  outcome: "Delivered a working automation demo that scans CVs against job requirements, produces pass/reject decisions with match scores, and sends personalized follow-up emails automatically — reducing manual screening time while keeping a human reviewer in the loop for ambiguous cases.",
+  tags: ["AI Agent", "Recruitment", "Automation", "HR Tech"],
+  images: [],
+  link: "https://canva.link/hz2rpgnct79yf7c"
+},
+{
+  title: "Hangar 51 (IAG): Innovation with Impact ",
+  client: "Culture of Engagement & Innovation",
+  role: "Group Project",
+  category: "Innovation & Culture Strategy",
+  featured: false,
+  summary: "Analyzed how International Airlines Group's Hangar 51 startup accelerator builds an innovation culture, and whether the parent company could replicate its results internally.",
+  challenge: "Evaluate the culture and structure behind Hangar 51, IAG's innovation accelerator, to understand what makes its 'pressure cooker' model work, and whether those results could be achieved inside the parent airline group itself.",
+  approach: [
+    "Researched Hangar 51's 10-12 week 'pressure cooker' program, where startups and internal teams pause normal work to sprint on real-world aviation problems",
+    "Compared stated company values (innovation, collaboration, agility) against real employee feedback to surface the gap between culture 'in theory' and 'in practice'",
+    "Mapped expected leadership behaviors that reinforce an innovation culture: open communication, continuous learning, fair reward, and structural habits",
+    "Assessed measurable outcomes, including IAG and British Airways' partnership with ZeroAvia on hydrogen-electric aircraft",
+    "Analyzed why the parent company (IAG) likely could not achieve the same results internally, citing compliance, risk aversion, and fragmented decision-making across business units"
+  ],
+  methods: ["Culture Analysis", "Stakeholder Research", "Employee Sentiment Review", "Case Study Method"],
+  outcome: "Concluded that Hangar 51's success stems from structural freedom (time-boxed sprints, external partnerships, fast decision cycles) that a large parent company can't easily replicate due to bureaucracy and risk aversion — despite the accelerator producing tangible innovation wins like the ZeroAvia hydrogen-electric aircraft partnership.",
+  tags: ["Innovation Culture", "Organizational Design", "Change Management"],
+  images: [],
+  link: "https://canva.link/khrwxi8ylp3p91u"
+},
+{
+  title: "Company X: Performance Management Proposal",
+  client: "HR Fundamentals",
+  role: "Group Project",
+  category: "Performance Management",
+  featured: false,
+  summary: "Diagnosed a misalignment between a global auto parts manufacturer's business strategy and its performance management practices, then proposed a redesigned system.",
+  challenge: "Assess whether Company X's business strategies and current performance management practices were aligned, based on the guiding question raised by leadership.",
+  approach: [
+    "Gathered data through in-depth interviews with an HRBP Ops Sr. Manager, an employee survey, and a review of internal company documents",
+    "Mapped the current objective-setting process (top-down vs. bottom-up) and how performance is evaluated against objectives and behaviors",
+    "Identified perspectives from managers, HR, and employees to triangulate where the system was breaking down",
+    "Found that 55% of employees lacked an Individual Development Plan and 63% only 'somewhat' understood the appraisal process",
+    "Developed key recommendations: a simplified talent philosophy, dual technical/leadership career paths, an objective-setting AI agent, and expanded leadership training on feedback and coaching"
+  ],
+  methods: ["Stakeholder Interviews", "Employee Survey", "Document Review", "Performance Management Design"],
+  outcome: "Delivered a proposal showing that while Company X had strong underlying HR tools, they weren't working together to support the business strategy — recommending changes that would shift the system from administrative compliance toward supporting the company's 'Transform to Grow' ambitions.",
+  tags: ["Performance Management", "Talent Strategy", "HR Consulting", "Employee Experience"],
+  images: [],
+  link: "https://canva.link/97iy6ynjlyah49c"
+},
+{
+  title: "Starbucks: Investment Analysis for Warren Buffett",
+  client: "Finance for HR",
+  role: "Group Project",
+  category: "Finance",
+  featured: false,
+  summary: "Analyzed Starbucks' FY22-FY23 income statement to produce an investment recommendation, framed as a client deliverable for a fictional Warren Buffett.",
+  challenge: "Evaluate Starbucks' financial performance and margin trends over FY21-FY23 to determine whether the company represented a sound investment opportunity.",
+  approach: [
+    "Analyzed year-over-year P&L variation, finding 12% net sales growth and 26% net income growth from FY22 to FY23",
+    "Expressed every income statement line as a percentage of net sales to track margin evolution across three fiscal years",
+    "Benchmarked cost of sales (32%) and SG&A (53%) against industry-standard ranges to assess operational efficiency",
+    "Calculated per-employee productivity metrics, showing 18% growth in net sales per employee and 33% growth in net income per employee",
+    "Identified key risks to the recommendation, including margin compression from inflation, SG&A reductions not materializing, and reliance on a single fiscal year of data",
+    "Synthesized findings into five key takeaways covering sales growth, cost structure, market volatility, and future profitability"
+  ],
+  methods: ["Financial Statement Analysis", "Margin Analysis", "Ratio Analysis", "Risk Assessment"],
+  outcome: "Recommended investing in Starbucks, citing a durable competitive advantage and consistent top- and bottom-line improvement, while flagging that past performance and revenue growth alone don't guarantee future profitability.",
+  tags: ["Financial Analysis", "Investment Strategy", "P&L Analysis", "Finance for HR"],
+  images: [],
+  link: "https://canva.link/ilt5t4qnhjcygg7"
+},
+{
+  title: "Workday: Strategic Repositioning Analysis",
+  client: "Digital Business",
+  role: "Group Project",
+  category: "Digital Strategy",
+  featured: false,
+  summary: "Analyzed Workday's market position and business model, then proposed a strategic repositioning from a cloud HR/Finance ERP to an AI-powered workforce intelligence platform.",
+  challenge: "Assess Workday's competitive position in the HR technology market and identify how the company should evolve its business model to stay ahead of AI-driven disruption from competitors like SAP and Oracle.",
+  approach: [
+    "Conducted background research on Workday's transformation journey, AI milestones, and ecosystem of 700+ partnerships",
+    "Applied Porter's Five Forces and SWOT analysis to map industry structure and Workday's strategic positioning",
+    "Identified structural gaps between Workday's strong data infrastructure and its still largely manual, human-driven decision-making",
+    "Synthesized 'Voice of the Customer' findings around cost transparency, implementation speed, and workforce visibility",
+    "Proposed a repositioning from 'Unified Cloud ERP' to 'AI-Powered Workforce Intelligence Platform' across three strategic pillars: AI-driven decision-making, a live internal talent marketplace, and native support for hybrid/gig workforces",
+    "Built a full Business Model Canvas for the repositioned platform, including new revenue streams and key success metrics (AI adoption rate, internal mobility rate, cost reduction targets)"
+  ],
+  methods: ["Porter's Five Forces", "SWOT Analysis", "Business Model Canvas", "Competitive Analysis", "Market Research"],
+  outcome: "Delivered a strategic repositioning roadmap recommending Workday shift from a reporting-focused ERP to an autonomous decision-orchestration platform, projecting measurable outcomes like a 10-15% reduction in administrative HR costs and reduced talent acquisition costs through internal mobility.",
+  tags: ["Digital Strategy", "HR Technology", "Business Model Innovation", "Competitive Analysis", "AI Strategy"],
+  images: [],
+  link: "https://canva.link/ypc8mdiod856xk7"
+},
+{
+  title: "Citi: Future Leaders Accelerator Coaching Program",
+  client: "Corporate Coaching",
+  role: "Group Project",
+  category: "Leadership Development",
+  featured: false,
+  summary: "Designed a 6-month executive coaching program proposal for high-potential leaders at Citi, built to support the bank's leadership pipeline during a major organizational transformation.",
+  challenge: "Citigroup's ongoing transformation, focused on performance accountability, organizational simplification, and stronger risk management, created a need for a stronger internal leadership pipeline to support succession planning and reduce reliance on costly external executive hires.",
+  approach: [
+    "Defined a target population of 25-30 high-potential leaders with 2-5 years in executive roles, selected against clear nomination criteria (top 20% performance rating, succession plan status, team impact)",
+    "Designed a 4-phase, 6-month program: performance analysis & goal alignment, individual coaching using the GROW framework, peer coaching circles, and business impact application",
+    "Structured 6 individual coaching sessions per participant focused on strategic decision-making, executive presence, and resilience under pressure, tailored to financial-sector pressures like regulatory compliance",
+    "Built a measurement dashboard tracking internal promotion rate, talent retention, time-to-promotion, and 360° leadership effectiveness scores pre- vs. post-program",
+    "Developed a cost-benefit case comparing the program's cost per cohort (~$521K for 28 leaders) against the cost of external executive hires (~$320K per hire)",
+    "Created a communication and rollout plan covering executive sponsorship, program launch, and ongoing stakeholder engagement"
+  ],
+  methods: ["GROW Coaching Framework", "Leadership Assessment", "360° Feedback", "Program ROI Analysis", "Change Management"],
+  outcome: "Delivered a business case projecting a 70% internal promotion rate (vs. 38% company average), 85% succession coverage for critical roles, and a coaching cost roughly 1.6x cheaper per leader developed than external executive hiring.",
+  tags: ["Executive Coaching", "Leadership Development", "Succession Planning", "Talent Retention", "Financial Services"],
+  images: [],
+  link: "https://canva.link/t9jxk5m2n0g58q1"
+},
+{
+  title: "Company X: Talent System Audit & Blueprint (MBN Model)",
+  client: "Talent Management",
+  role: "Group Project",
+  category: "Talent Management",
+  featured: false,
+  summary: "Audited an insurance company's talent system against the 'More, Better, Now' (MBN) framework and designed a phased blueprint to build an internal talent marketplace and strengthen succession depth.",
+  challenge: "Assess Company X's current talent management practices against the 10 levers of the MBN model and design a roadmap to close capability gaps, reduce reliance on external hiring, and strengthen succession pipelines for critical roles (actuaries, IT talent).",
+  approach: [
+    "Conducted an interview with a former HRBP and current HR Ops Specialist, combined with a review of internal and public company documents",
+    "Rated the organization across all 10 MBN levers (Hire Well, Drive Performance, Retain the Best, etc.), identifying strong areas like performance reviews and IDPs alongside gaps in retention risk tracking and succession depth",
+    "Mapped a system coherence analysis comparing what the company needs to succeed against what its current talent system actually delivers, and where the gaps are",
+    "Designed three core principles for the future state: HRBP as 'talent conductor,' an internal talent marketplace, and a skills-first organization",
+    "Built a 3-phase, 24-month roadmap: foundational skills taxonomy (months 0-6), a pilot internal talent marketplace in Madrid (months 6-15), and full integration into workforce and succession planning (months 15-24)",
+    "Defined success metrics including a projected 25% increase in internal fill rate, 20-25% reduction in external hiring, and 10-15% increase in internal mobility rate"
+  ],
+  methods: ["MBN (More, Better, Now) Framework", "Stakeholder Interviews", "Skills Taxonomy Design", "Succession Planning", "SAP SuccessFactors"],
+  outcome: "Delivered a 24-month blueprint projecting stronger succession depth in critical roles (from 1-2 to 2-3 ready successors), reduced external hiring, and an internal talent marketplace expected to be used by 70-80% of leaders within two years.",
+  tags: ["Talent Management", "Succession Planning", "Internal Mobility", "Skills-Based Organization", "HR Strategy"],
+  images: [],
+  link: "https://canva.link/muapcd3vfllxe41"
+},
+{
+    title: "Armani Group: Post-Founder Succession Analysis",
+    client: "New Leadership Effectiveness",
+    role: "Group Project",
+    category: "Leadership Development",
+    featured: false,
+    summary: "An analysis of Armani Group's leadership transition following Giorgio Armani's death in September 2025, examining whether the organization's leadership structure can function beyond its founder and recommending a path forward for his successor, Giuseppe Marsocci.",
+    challenge: "Giorgio Armani led the company as Executive Chairman and Chief Creative Officer for 50 years, centralizing creative and strategic decisions personally with no formally documented succession plan. When he passed in September 2025, Giuseppe Marsocci, a 23-year veteran of the company, was appointed CEO without any publicly visible formal preparation, decision rights were never redistributed, and the board had not been actively involved in leadership pipeline planning.",
+    approach: [
+        "Applied a theoretical lens combining leadership effectiveness theory, trait approach, founder's shadow, and succession planning frameworks to diagnose the gap between Armani's directive leadership model and the needs of a post-founder organization",
+        "Benchmarked against Chanel's succession of Karl Lagerfeld by Virginie Viard, showing that proximity and loyalty alone do not guarantee successful independent leadership",
+        "Mapped Armani's succession approach onto a board-initiated vs. CEO-initiated / stable vs. crisis context matrix, positioning the company in the 'Stabilizer' quadrant (internal succession, no formal preparation) and recommending a shift toward 'Steward'",
+        "Evaluated two strategic paths forward and built a phased implementation roadmap across 0–12, 12–36, and ongoing horizons"
+    ],
+    methods: [
+        "Trait approach to leadership",
+        "Founder's shadow analysis",
+        "Succession planning framework",
+        "Competitor/industry benchmarking",
+        "Strategic options analysis",
+        "Implementation roadmapping"
+    ],
+    outcome: "Recommended 'Continuity with Structure': retaining Marsocci as CEO while formally documenting and distributing decision rights, introducing transparent role boundaries across senior leadership, and sequencing internal reforms over time — rather than a riskier transformational overhaul. Proposed a concrete roadmap covering leadership assessment and decision-rights documentation (Year 1), structured leadership development and board involvement (Years 1–3), and ongoing governance to embed succession planning into the organization permanently.",
+    tags: ["Succession Planning", "Leadership Effectiveness", "Founder Transition", "Governance"],
+    images: [],
+    link: "https://canva.link/haiiaiw320pif7p"
+},
+{
+    title: "Argento: Global Mobility Redesign",
+    client: "HR Operations & Systems",
+    role: "Group Project",
+    category: "HR Process & Systems Redesign",
+    featured: false,
+    summary: "A root-cause analysis and operating model redesign for Argento's Global Mobility function, addressing a missed tax filing deadline and a double payroll payment caused by fragmented ownership, manual processes, and disconnected payroll systems across 105 international assignees.",
+    challenge: "Two operational failures exposed Argento to financial and compliance risk: a supplier missed a tax filing deadline due to no SLA or escalation path, and a double payroll payment occurred because a postponed start date wasn't reflected in payroll. Root cause analysis traced both incidents to two structural themes: no single process owner with governance (no RACI, no SLAs, no escalation paths) and fragmented technology (5 separate payroll vendors, manual notifications, no automated validation controls between Oracle HCM and payroll systems).",
+    approach: [
+        "Conducted root cause analysis tracing both failures back to 5 root causes, grouped into governance and technology themes",
+        "Designed a RACI-based governance model creating a Global Mobility Centre of Excellence (COE) as single accountable process owner, with GBS/HR Shared Services responsible for execution",
+        "Built a 4-layer Target Operating Model (governance, operations, input/execution/output, technology) with 3 automated validation gateways and 5 KPIs to prevent recurrence",
+        "Redesigned the payroll technology landscape, consolidating 5 fragmented country vendors into a single ADP/Deel provider integrated with Oracle HCM and ServiceNow",
+        "Built a full financial business case comparing €208,000/year cost of inaction against a €205,000 Year 1 / €90,000 Year 2 investment, with ROI and payback analysis",
+        "Sequenced a 12-month, 4-phase implementation roadmap from governance mandate through full operational rollout"
+    ],
+    methods: [
+        "Root cause analysis",
+        "RACI matrix",
+        "Target Operating Model (TOM) design",
+        "Process mapping (as-is / to-be workflows)",
+        "Six Sigma principles",
+        "Financial/ROI business case",
+        "Phased implementation roadmapping",
+        "KPI & gateway design"
+    ],
+    outcome: "Recommended board approval of Phase 1: mandating a Global Mobility COE, authorizing a dedicated COE lead hire, and commissioning the RACI and SLA framework. The redesign consolidates payroll from 5 vendors to 1, embeds 3 automated data-validation gateways into HRIS, and targets zero double payments, 100% tax filing compliance, and full consolidation of all 105 assignees under the new model within 12 months, at a projected 24-month payback period and €118,000 net annual advantage over inaction from Year 2 onward.",
+    tags: ["Global Mobility", "Process Redesign", "RACI", "HRIS", "Payroll Integration", "Governance", "ROI"],
+    images: [],
+    link: "https://canva.link/z6arooft7kxvd27"
+},
+{
+    title: "DataEdge: Combined Leadership & Agile Delivery Program",
+    client: "Learning & Development II",
+    role: "Group Project",
+    category: "Learning & Development",
+    featured: false,
+    summary: "A learning needs diagnosis and program design for DataEdge, a 650-person AI software company, combining new manager development with agile delivery upskilling into a single cross-country leadership program to address undertrained managers and underperforming engineering delivery.",
+    challenge: "DataEdge, a fast-growing AI software company across Madrid, Milan, and Munich, faced a critical bug rate nearly double its target (18 vs. ≤12), slow engineering onboarding (10 weeks vs. a 7-week target), and only 22% of managers formally trained in leadership versus a 70% target. Untrained new managers and remote collaboration challenges were driving lost productivity, collaboration failures, and employee burnout, while a constrained leadership training budget limited what could be delivered on its own.",
+    approach: [
+        "Diagnosed learning needs using a prioritization framework weighing business impact, reach/urgency, evidence from data, and budget fit to select from four candidate initiatives",
+        "Identified an opportunity to combine New Manager Development with Agile Delivery Upskilling into a single program, stretching a constrained leadership budget by pairing it with a stronger agile training budget",
+        "Designed 'LeadingEdge': a 7-week blended program for all 60 DataEdge managers, delivered face-to-face in 3 parallel, local-language cohorts across Madrid, Milan, and Munich to preserve inclusion and psychological safety",
+        "Structured delivery around a 70-20-10 learning model: core sessions on leadership foundations and agile delivery, post-programme mentoring/shadowing pairing junior and senior managers, and cross-site best-practice sharing",
+        "Built a delivery/cost model blending internal HR/L&D and senior-manager trainers with external specialist vendors (e.g. Korn Ferry, PMI) to balance cost, credibility, and consistency across the 3 countries",
+        "Modeled cost of inaction using external benchmarks (Gallup, industry turnover and agile-failure statistics) to justify investment, and provided Low/Mid/High cost scenarios benchmarked against the Training Industry Report"
+    ],
+    methods: [
+        "Learning needs diagnosis",
+        "Prioritization matrix (impact, urgency, evidence, budget fit)",
+        "70-20-10 learning model",
+        "Cohort-based blended learning design",
+        "Mentoring & shadowing program design",
+        "Cost-of-inaction / ROI benchmarking",
+        "Vendor and delivery-partner cost modeling"
+    ],
+    outcome: "Proposed a 7-week, cross-country leadership and agile delivery program targeting all 60 DataEdge managers, projected to lift formal manager training from 22% to 70%, reduce critical bugs per release from 18 to 12, cut product cycle time from 16 to 12 weeks, and shorten engineering onboarding from 10 to 7 weeks, at an estimated cost of roughly €360–€930 per manager depending on delivery scenario, tracked via pre/post capability self-assessments, quarterly engagement pulses, and monthly bug/cycle-time metrics.",
+    tags: ["Leadership Development", "Agile Upskilling", "Manager Training", "Learning Needs Analysis", "Blended Learning", "Cohort Design"],
+    images: [],
+    link: "https://canva.link/71uum8ldz97pv1a"
+},
+{
+    title: "Incredisurance: A Human-AI Transformation Design for Claims Processing",
+    client: "AI in HR",
+    role: "Group Project",
+    category: "AI & Automation",
+    featured: false,
+    summary: "A human-AI transformation design for a mid-sized European insurer, deploying an AI claims agent ('CLAIMSBOT 3000') to cut claims cycle time from 14 days to 1.5 days and meet a board-mandated 25% cost reduction target, while redesigning every affected role rather than simply automating people out.",
+    challenge: "Incredisurance's 4,200-person claims organization processed insurance claims manually, producing 14-day average cycle times, inconsistent decisions, and disappointed customers. The board mandated an AI agent implementation within 18 months and a 25% operating cost reduction within 36 months, against a workforce where 40% of staff sat in claims processing, average tenure was 12 years, and a strong union presence meant any transformation had to be negotiated rather than imposed.",
+    approach: [
+        "Benchmarked against AXA, Allianz, and Lemonade to define a 3-stage AI maturity model (task automation, agents, superagents) and positioned the target design at Stage 2–3",
+        "Mapped current and future org structures via workforce treemaps, redesigning all four claims roles into AI-augmented equivalents (e.g. Senior Claims Handler → Complex Claims Specialist, Data Entry Clerk → AI Trainer & Workflow Designer) rather than eliminating headcount outright",
+        "Designed CLAIMSBOT 3000's decision architecture end-to-end: training data sources (customer records, fraud cases, disputed claims, senior-handler interviews, policy libraries, bias audit data) and a full triage/escalation process flow with human-in-the-loop checkpoints for fraud, complexity, and claimant distress",
+        "Built a formal workforce transition plan with union commitments (no forced redundancies in Year 1, monthly consultation, outplacement and retraining support) and mapped predicted resignations vs. redundancies by role",
+        "Conducted an 'invisible work' audit to capture undocumented senior-handler judgment and informal mentoring before it was lost to automation, feeding it into the agent's design and formal shadowing programs",
+        "Embedded EU AI Act compliance (CLAIMSBOT classified high-risk under Article 6) via a governance framework covering fairness, transparency, oversight, and privacy, with a human override function",
+        "Named and resolved four explicit design tensions (speed vs. trust, efficiency vs. development, measurement vs. meaning, compliance vs. capability), each with a stated cost of the trade-off",
+        "Built a full financial case across 5 appendix tables: headcount savings, operational efficiency savings, investment requirements, and board-target verification"
+    ],
+    methods: [
+        "AI maturity benchmarking",
+        "Org design / treemap workforce mapping",
+        "Process redesign (as-is / to-be swimlanes)",
+        "Change management & union engagement planning",
+        "Invisible/tacit knowledge capture",
+        "AI governance & EU AI Act compliance design",
+        "Role transformation & reskilling planning",
+        "Financial modeling & ROI analysis"
+    ],
+    outcome: "Proposed an 18-month phased rollout (culture readiness and union engagement → EU AI Act compliance and bias audit → 50% agent deployment → full 6-country rollout) projected to cut average claims cycle time from 14 to 1.5 days, resolve 80% of claims autonomously within 4 hours, and deliver €36.86M in Year 3 cost savings against a €30M target (25% reduction, achieved ahead of schedule), against a €7.9M one-time and €750K annual ongoing investment, while committing to no forced redundancies in Year 1 and redeploying over 60% of affected staff into new AI-augmented roles.",
+    tags: ["AI Transformation", "Workforce Redesign", "Change Management", "EU AI Act", "Union Relations", "Insurance", "AI Governance"],
+    images: [],
+    link: "https://canva.link/0jrudfgmkmexywx"
+},
+{
+    title: "Bank Co: Strategic Positioning for a Global Health & Wellbeing Function",
+    client: "Wellbeing Culture",
+    role: "Individual Project",
+    category: "Wellbeing",
+    featured: false,
+    summary: "An individual strategic plan, written from the perspective of a newly appointed Global Head of Health & Wellbeing, positioning wellbeing as a business-critical function at a 150,000-employee bank navigating simultaneous downsizing, digital transformation, and hybrid-work culture fragmentation.",
+    challenge: "Bank Co. faced three converging risks with no dedicated wellbeing function to manage them: a downsizing program driving survivor syndrome, anxiety, and an eroded psychological contract; a digital transformation increasing cognitive load and burnout in high-value talent; and a hybrid workforce causing cultural fragmentation and always-on boundary erosion. Left unaddressed, these risks threatened to undermine the ROI of the bank's core strategic investments, from restructuring to digital rollout to global culture cohesion.",
+    approach: [
+        "Reframed wellbeing from an employee benefit to a strategic enabler that protects the business case behind digital transformation, restructuring, and culture stewardship, positioned as a layer running through HR and business initiatives rather than a standalone pillar",
+        "Built the case for managers as the primary lever of impact, citing Gallup research that ~70% of engagement variance traces to the manager, and defined specific accountable behaviors (responding to mistakes with curiosity, modeling healthy boundaries, protecting junior voices)",
+        "Designed a 4-phase, multi-year roadmap (Foundation & Credibility → Embedding & Standard Setting → Scaling & Globalization → Institutionalization) moving the function from pilot programs to being fully embedded in performance management and governance",
+        "Mapped a stakeholder communication strategy tailored to leadership, corporate/regional HR, and local managers/employees, each with distinct messaging and delivery channels",
+        "Defined 3 strategic pillars (wellbeing through downsizing, wellbeing in digital transformation, culture cohesion in hybrid work) and 3 foundational enablers (manager capability, baseline measurement infrastructure, cross-functional coalition/governance)",
+        "Designed 4 flagship global initiatives (Care Through Change, Leading Through Change, Digital Wellbeing Standard, Bank Co. Wellbeing Index), each specified across mandatory global standards, locally adapted elements, and fully locally owned decisions",
+        "Built a KPI framework (adapted from a Sanofi measurement model) organized around culture movement, value creation, environmental health, and leadership positioning, with defined data sources, reporting cadence, and governance ownership"
+    ],
+    methods: [
+        "Strategic function design & positioning",
+        "Stakeholder mapping & communication planning",
+        "Global-local operating model design (mandatory / adapted / owned framework)",
+        "Manager-centric change leadership design",
+        "KPI & measurement framework design",
+        "Phased roadmapping",
+        "Change management theory (survivor syndrome, psychological safety)"
+    ],
+    outcome: "Proposed a global Health & Wellbeing function reporting through a CHRO-accountable governance model, launching in Q3 2026 with baseline diagnostics and downsizing-linked pilots, scaling through 2027–2028 into a global Wellbeing Ambassador network and Healthy Leadership program, and reaching full institutionalization by 2029 where wellbeing is embedded directly into performance management and leadership expectations. Success is tracked via manager effectiveness, Wellbeing Index score, voluntary attrition, and the cost of regrettable attrition in critical talent segments — directly tying the function's impact back to protecting the ROI of Bank Co.'s restructuring and digital transformation investments.",
+    tags: ["Wellbeing Strategy", "Change Management", "Manager Enablement", "Banking", "Hybrid Culture", "Organizational Design"],
+    images: [],
+    link: "https://canva.link/uvn4zs8colh9z4d"
+},
+{
+    title:"TechNova: Transforming Talent Retention & Engagement",
+    client:"Consulting Skills",
+    role:"Group Project",
+    category:"Talent Management",
+    featured:false,
+    summary:"A consulting proposal diagnosing TechNova's 21% voluntary turnover (vs. 15% industry benchmark) and designing a three-pillar retention strategy projected to generate $8.6M in annual cost avoidance by Year 3.",
+    challenge:"TechNova, a fast-growing AI & Cloud solutions company, faced a voluntary turnover rate of 21% versus a 15% industry benchmark, costing an estimated $30M+ annually. The crisis was concentrated in Engineering & Product (30% turnover, 40% of workforce) and among mid-career employees at the 3–7 year tenure mark, who left at a rate of 35% company-wide, threatening institutional knowledge and innovation capacity.",
+    approach:[
+      "Conducted a root cause analysis using exit interview data (n=47), quarterly engagement surveys, and an attrition heatmap segmented by department and tenure band",
+      "Built a MECE framework identifying three root causes: no visible career path, uncompetitive pay, and burnout/high workload",
+      "Mapped stakeholder needs and fears (CHRO, CFO, Line Managers, High-Risk Employees, HR Team) using a Mendelow power/interest matrix to shape a change management plan",
+      "Designed three strategic pillars — Career Growth, Compensation, and Leading for Wellbeing — translated into six actionable initiatives with owners, timing, and success metrics",
+      "Developed a phased implementation roadmap (Q1–Q4) and a quantified business case with ROI modeling, budget breakdown, and risk mitigation strategies"
+    ],
+    methods:[
+      "Exit Interview Analysis",
+      "Root Cause / MECE Analysis",
+      "Stakeholder Mapping (Mendelow Matrix)",
+      "Compensation Benchmarking (Compa-Ratio)",
+      "SWOT & PESTEL Analysis",
+      "Business Case / ROI Modeling",
+      "Scenario Planning"
+    ],
+    outcome:"Delivered a board-ready proposal recommending a $3.65M investment (8% of existing HR budget) across six initiatives, targeting a reduction in mid-career turnover from 35% to 20%, an engagement score increase from 62 to 72, and closing the pay gap vs. market from -10% to 0% — projected to avoid $8.6M in annual turnover costs by Year 3.",
+    tags:["HR Strategy","Talent Retention","Employee Engagement","Compensation Analysis","Change Management","Business Case Development"],
+    images:[],
+    link:"https://canva.link/pplwhdcf41eoxn6"
+  },
+  {
+    title:"SEIPL: Scaling SE Digital India while Protecting Cultural Integration",
+    client:"Managing Change & Building Organizational Resilience",
+    role:"Group Project",
+    category:"Change Management & Organizational Resilience",
+    featured:false,
+    summary:"An HR advisory proposal for Schneider Electric India, resolving the tension between hiring 2,000 AI engineers in 24 months for SE Digital India and preserving SEIPL's post-merger cultural integration, through a shared-governance operating model and phased change plan.",
+    challenge:"SE Digital India (SEDI) needed to hire 2,000 engineers in 24 months to build AI-driven energy management and IoT products in Bangalore, while SEIPL's Country President sought to protect 5 years of post-merger cultural integration across 37,000 employees. The incoming Digital Head demanded a separate employer brand, 35-40% pay premiums, and a flat hierarchy to attract top-tier AI talent, creating a direct conflict with the Country President's insistence on unity and fairness. Early signals showed a 502% surge in applications (a third from internal SEIPL staff) and active competitor poaching of Bangalore engineers.",
+    approach:[
+      "Diagnosed the cultural gap between SEIPL's current culture and SEDI's desired culture using Schein's 3 Levels of Culture framework (artifacts, espoused values, underlying assumptions)",
+      "Designed an embedded HR Target Operating Model housing a dedicated SE Digital India Talent Center of Excellence inside SEIPL's HR function, with shared governance over employer brand and reward design",
+      "Resolved four key strategic trade-offs: a 20-25% pay premium (below the 35-40% ask, offset by non-monetary benefits), an embedded operating model, an internal-first hiring policy to prevent cannibalization, and a governance structure balancing both leaders' mandates",
+      "Structured recruiting operations as a hybrid build-buy model, combining an in-house team, RPO partnerships, specialist search agencies, and a company-wide digital upskilling program",
+      "Built a detailed two-year recruiting budget (~32 Cr INR / 3M EUR) across six cost buckets with underlying hiring and fee assumptions",
+      "Phased the 24-month change plan using Kotter's 8-Step Change Model across three phases (Create Climate, Engage & Enable, Implement & Sustain), with defined milestones and role-specific asks for senior leaders, people managers, and the Talent CoE",
+      "Defined a KPI dashboard tracking hiring volume, SEIPL/SEDI engagement, internal attrition, and upskilling completion, each with clear owners"
+    ],
+    methods:[
+      "Schein's 3 Levels of Culture Framework",
+      "Kotter's 8-Step Change Model",
+      "HR Target Operating Model Design",
+      "Stakeholder Trade-Off Analysis",
+      "Build-Buy Recruiting Strategy",
+      "Budget Modeling",
+      "KPI & Governance Design"
+    ],
+    outcome:"Recommended an embedded (not federated) Talent CoE model giving SEIPL's Country President continued sign-off on pay bands and cultural architecture, while granting SE Digital India its own sub-brand, dedicated recruiting campaign, and 20-25% pay premium. The plan targets 2,000 hires within 24 months, SEIPL engagement maintained at 78%+, internal attrition held below 6%, and 500 SEIPL employees upskilled in Year 1, funded by a ~32 Cr INR (3M EUR) recruiting budget.",
+    tags:["Change Management","Organizational Design","Talent Acquisition","Culture Integration","M&A Integration","HR Operating Model","Employer Branding"],
+    images:[],
+    link:"https://canva.link/blhkivai1qw83l1"
+  },
+  {
+    title:"Sales Team: Wellbeing Deep Dive and Action Plan",
+    client:"Workplace Wellbeing Impact & Measurement",
+    role:"Group Project",
+    category:"Wellbeing",
+    featured:false,
+    summary:"A metrics-led sentiment diagnostic for a Sales team with 28.1% annualized attrition, identifying a collapsed Values & Ethics trust gap as the root cause and proposing a three-part intervention framework projected to deliver a 2.4x return on investment.",
+    challenge:"The Sales team faced an annualized attrition rate of 28.1%, more than double the 13% tech industry benchmark, with 8 exits against only 6 hires over 9 months. The team scored lowest of any business unit on a happiness index (60.0/100) and remained trapped in persistently negative eNPS territory (-4.3 to -13.3) with no positive months. Modeled financial exposure from inaction reached €484,000 annually in excess turnover, lost productivity, and absenteeism costs.",
+    approach:[
+      "Diagnosed sentiment and attrition drivers using a metrics-led framework spanning eNPS trends, happiness index scores, and exit interview data",
+      "Isolated Values & Ethics alignment as the team's weakest driver by far, tracking a monthly trend (Feb–Jun 2026) that flatlined between 1.5 and 2.2 against a 7.0 benchmark — a systemic deficit of over 70% below target",
+      "Distinguished a trust and leadership breakdown from operational confusion by confirming functional clarity (strategic clarity, roles, OKRs) scored exceptionally well",
+      "Identified management inconsistency as a secondary driver, with 20% of leavers citing poor manager relationships despite managers' strong technical performance",
+      "Designed a three-part intervention framework: quarterly live leadership Q&As with anonymous feedback channels, manager coaching training tied to regular feedback loops, and a workload recalibration exercise for high-pressure seasonal periods",
+      "Built a financial model comparing the cost of inaction (€483,596 annualized) against a proposed program investment (€65K–€107K), projecting a €311,342 Year 1 benefit",
+      "Defined a target telemetry KPI matrix (Values & Ethics Index, eNPS trajectory, coaching completion, voluntary attrition) with a quarterly/monthly/annual evaluation protocol"
+    ],
+    methods:[
+      "Sentiment & Attrition Diagnostics",
+      "Root Cause Analysis",
+      "eNPS & Employee Happiness Index Tracking",
+      "ROI / Financial Modeling",
+      "Intervention Framework Design",
+      "KPI & Evaluation Protocol Design"
+    ],
+    outcome:"Presented a committee-ready action plan recommending a €65K–€107K investment in leadership transparency, manager coaching, and workload recalibration programs, projecting a 2.4x return multiple and 4.9-month payback period, with a net financial benefit of €183,842 in Year 1. Target outcomes include restoring the Values & Ethics Index above 7.0, sustaining positive eNPS, 100% core management coaching completion, and reducing voluntary attrition to the 13% industry benchmark.",
+    tags:["Workplace Wellbeing","Employee Sentiment","Attrition Analysis","eNPS","ROI Modeling","Leadership Development","Culture & Trust"],
+    images:[],
+    link:"https://canva.link/p5zcysflvk4s0ee"
+  },
+  {
+    title:"Innovex Italy: Employee Relations & Conflict Resolution Plan",
+    client:"Employee Relations & Conflict Resolution",
+    role:"Group Project",
+    category:"Employee Relations & Conflict Resolution",
+    featured:false,
+    summary:"An advisory task force response to the Innovex CEO addressing a whistleblower retaliation crisis that escalated from a director-level conflict-of-interest dismissal into parallel labor and criminal court proceedings, presenting a four-phase STAR framework (Stabilize, Tell, Act, Rebuild) to protect victims and repair organizational trust.",
+    challenge:"A conflict-of-interest dismissal of a director at Innovex Italy triggered a severe retaliation crisis, with 7 individuals directly targeted through threats and leaked personal images, 200 Italy employees affected by a climate of fear, and reputational reach extending to 12,250 global employees. The crisis had escalated beyond a disciplinary matter into a psychological safety and organizational trust issue, with two parallel legal exposures (labor and criminal court) and no existing protocol to protect whistleblowers and investigation participants after a case closed.",
+    approach:[
+      "Diagnosed the conflict using a task/structural, relationship, and power framework, identifying a failed vendor due-diligence process as the structural root and Rossi's directorial influence as the power dynamic behind the retaliation",
+      "Conducted a root cause analysis distinguishing individual misconduct (conflict of interest, retaliation) from five systemic gaps: controls, culture, leadership & accountability, whistleblower protection, and crisis response",
+      "Mapped the escalation timeline from a contained, procedurally sound investigation to a prolonged crisis, pinpointing the exact turning point where retaliation began",
+      "Built a stakeholder tension map and concentric-circle exposure model spanning directly targeted individuals, Italy employees, global employees, and external parties (CEO, Board, courts, press)",
+      "Captured four distinct stakeholder perspectives (The Exposed, The Audience, Compromised Leaders, Decision-Makers) with representative quotes and core concerns to guide differentiated response",
+      "Produced a risk assessment matrix covering physical safety, whistleblowing trust, reputational damage, legal exposure, and leadership trust, each with named owners and mitigations",
+      "Designed the STAR response framework: Stabilize (psychological, legal, security, and managerial protection measures), Tell (audience-specific communication strategy with tone guidelines and do/don't rules), Act (manager enablement training to translate leadership messages and escalate risk), and Rebuild (structural fixes mapped directly to each root-cause gap, including a formal post-investigation protection protocol)",
+      "Sequenced a recovery timeline across short-term (0-72 hours), medium-term (30 days), and long-term (6-12 months) horizons with concrete actions and owners",
+      "Defined 12-month success measures across Safety & Trust, Systems Working, and Reputation & Culture categories with quantified targets"
+    ],
+    methods:[
+      "Root Cause Analysis",
+      "Conflict Diagnosis (Task/Relationship/Power)",
+      "Stakeholder Mapping",
+      "Crisis Risk Assessment",
+      "Crisis Communication Strategy",
+      "Change/Recovery Timeline Sequencing",
+      "KPI & Success Metric Design"
+    ],
+    outcome:"Delivered a board-ready crisis response plan structured around the STAR framework, recommending immediate protective measures for the 7 targeted individuals, a tiered communication rollout to Italy and global employees within 72 hours, mandatory manager training on psychological safety, and structural fixes including automated conflict-of-interest screening and a formal post-investigation whistleblower protection protocol. Success targets for 12 months post-crisis include a psychological safety score above 80%, 100% manager training completion, and voluntary turnover held below 10%.",
+    tags:["Employee Relations","Conflict Resolution","Whistleblower Protection","Crisis Management","Root Cause Analysis","Crisis Communications","Change Management"],
+    images:[],
+    link:"https://canva.link/npe0ns5obrz8sl7"
+  },
+{
+    title:"FIFA: Assessment Center Proposal for L&D Manager Role",
+    client:"Psychometrics",
+    role:"Group Project",
+    category:"Talent Management",
+    featured:false,
+    summary:"A competency-based assessment center proposal for FIFA, designed to select an L&D Manager capable of operating as a strategic business partner across a fast-paced, hierarchical, and globally distributed organization.",
+    challenge:"FIFA needed to hire an L&D Manager for a strategic role marked by heavy cross-regional complexity, tournament-cycle unpredictability, and a hierarchical culture spanning multiple global offices. A traditional interview process risked selecting a candidate who could not bridge L&D and the business, secure stakeholder buy-in, or adapt initiatives to competing business priorities — with long-term consequences including misaligned learning incentives and reduced stakeholder engagement.",
+    approach:[
+      "Conducted needs assessment interviews with key FIFA stakeholders to define organizational context, role responsibilities, success indicators, and key challenges",
+      "Built a job-analysis-derived competency model covering six core competencies: Relationship Building, Adaptability, Communication, Influence, Business Acumen, and Strategic L&D Expertise, each linked to specific role demands",
+      "Designed a full-day, multi-exercise assessment center for 4-6 candidates per session, including a Strategic L&D Proposal/Presentation, Stakeholder Roleplay, In-Basket Simulation, Cross-Functional Group Exercise, and Structured Behavioral Interview, each mapped to specific competencies",
+      "Developed a rigorous scoring methodology using Behaviorally Anchored Rating Scales (BARS), a multi-method/multi-rater approach, structured assessor training and calibration, and a formal consensus meeting process to finalize composite competency scores",
+      "Established validity and fairness safeguards including content validity (exercises grounded in real job challenges), construct validity (competencies assessed across multiple simulations), and bias mitigation protocols (identical materials, structured scoring guides, bias-awareness training, exclusion of demographic data)",
+      "Sequenced a 7-week implementation roadmap from competency framework finalization through assessor training, pilot testing, refinement, and official launch"
+    ],
+    methods:[
+      "Job Analysis & Needs Assessment Interviews",
+      "Competency Modeling",
+      "Assessment Center Design",
+      "Behaviorally Anchored Rating Scales (BARS)",
+      "Multi-Rater Scoring & Inter-Rater Reliability",
+      "Content & Construct Validity Analysis",
+      "Bias Mitigation & Legal Defensibility Design"
+    ],
+    outcome:"Delivered a fully designed, legally defensible assessment center proposal combining five simulation-based exercises and a structured scoring protocol, projected to reduce hiring risk, strengthen strategic alignment with FIFA's business cycles, and improve quality of hire by directly observing candidates' influence, adaptability, and business acumen in realistic job scenarios. The proposal included a complete 7-week rollout plan from framework finalization to pilot testing and launch.",
+    tags:["Psychometrics","Assessment Center Design","Competency Modeling","Talent Selection","Validity & Fairness","BARS","Hiring Strategy"],
+    images:[],
+    link:"https://canva.link/clbkd4whuiz8xao"
+  },
+  {
+    title:"Accenture: AI-Powered L&D at Scale",
+    client:"Learning & Development I",
+    role:"Group Project",
+    category:"Learning & Development",
+    featured:false,
+    summary:"A benchmarking analysis of Accenture's Learning & Development ecosystem, examining how the company positions L&D as strategic capital equal to R&D investment to drive AI-led business reinvention across a 700K+ person global workforce.",
+    challenge:"Understand how a global professional services leader translates a $2B+ L&D investment into measurable workforce transformation, particularly how AI skilling is embedded across all roles and functions to accelerate commercialization of AI-driven services, and what internal and external ecosystem choices enable that scale.",
+    approach:[
+      "Analyzed Accenture's financial commitment to L&D, benchmarking $2B+ total spend (FY2023-25) and ~$1,284 per-employee investment (3.2x industry average) against R&D spend to establish L&D's positioning as equal strategic capital",
+      "Mapped the L&D strategy and architecture from strategic positioning (AI-led business reinvention) through workforce redesign, AI-integrated service delivery, and role-based AI learning pathways, to the enabling LearnVantage platform",
+      "Examined Accenture's AI skilling strategy across an Educate-Enable-Embed framework, tracking progress against mandatory training and credentialing goals for the 700K+ employee base",
+      "Catalogued internal development infrastructure, including LearnVantage Academies, Nanodegrees, ecosystem integrations (AWS, Google Cloud, Microsoft), and an AI-powered recommendation engine for personalized learning paths and skill gap analysis",
+      "Documented Accenture's external partnership ecosystem spanning online learning platforms (Coursera, Pluralsight, Udacity, Skillsoft, Workera), specialized training providers (Ascendient Learning, Praxis Labs), and university partnerships (Nova SBE, MIT, UCL, Singapore Management University)",
+      "Tracked scale and outcome metrics including training hour growth (15M to 47M, 2015-2025), 600K+ employees trained in AI fundamentals, and 480K+ cloud and platform credentials held"
+    ],
+    methods:[
+      "Benchmarking Analysis",
+      "L&D Strategy Mapping",
+      "Investment & ROI Comparison",
+      "Ecosystem & Partnership Analysis",
+      "Skills Framework Analysis"
+    ],
+    outcome:"Produced a comprehensive strategic profile showing Accenture treating L&D as competitive infrastructure on par with R&D, achieving 96% AI & Data Practitioner goal progress, 79% Gen AI-trained workforce, and over 50 Brandon Hall HCM Excellence Awards in 2024, underpinned by a unified AI-native learning platform and a blended internal/external partner ecosystem.",
+    tags:["Learning & Development","AI Skilling","Workforce Transformation","L&D Strategy","Benchmarking","Talent Development"],
+    images:[],
+    link:"https://canva.link/00z0331e9kaueid"
+  },
+  {
+    title:"Coca-Cola: Increasing Total Shareholder Return",
+    client:"Finance for HR",
+    role:"Group Project",
+    category:"Finance",
+    featured:false,
+    summary:"A benchmarking analysis identifying best-in-class strategic moves from FMCG competitors (PepsiCo, Keurig Dr Pepper, and Red Bull) and translating them into actionable recommendations for The Coca-Cola Company to increase Total Shareholder Return (TSR).",
+    challenge:"Coca-Cola, as a mature market leader, faces the challenge of sustaining top-line and bottom-line growth in a highly competitive FMCG landscape. The project required identifying proven value-creation strategies from industry peers and adapting them to Coca-Cola's unique brand portfolio and market position.",
+    approach:[
+      "Benchmarked three best-in-class case studies: PepsiCo's 'Power of One' food-and-beverage integration, Keurig Dr Pepper's acquisition-and-separation strategy, and Red Bull Media House's content-driven brand marketing.",
+      "Analyzed each company's strategic rationale, execution, and measurable business results (revenue growth, cost synergies, brand awareness).",
+      "Translated each case into a Coca-Cola-specific recommendation, including potential co-marketing partnerships with snack producers, an acquisition/separation strategy modeled on alcoholic beverage brands, and expanded storytelling-based marketing built on Coca-Cola's existing platforms.",
+      "Evaluated the impact of each recommendation on Coca-Cola's TSR through sales growth and margin improvement, while identifying key execution risks and mitigations."
+    ],
+    methods:[
+      "Competitive Benchmarking",
+      "Total Shareholder Return (TSR) Analysis",
+      "Case Study Research",
+      "Strategic Recommendation Development",
+      "Risk Assessment"
+    ],
+    outcome:"Delivered a set of three strategic recommendations, forming snack-industry alliances, pursuing an alcoholic-beverage acquisition and separation, and scaling storytelling-based marketing, projected to drive TSR growth through diversified revenue streams, improved margins, and stronger brand loyalty.",
+    tags:["Finance", "TSR", "Corporate Strategy", "FMCG", "Benchmarking", "M&A"],
+    images:[],
+    link:"https://docs.google.com/presentation/d/1JIbLWU_soB0hnV93OkWW16KQcc_ohJgwkF0XYAGMFyE/edit?usp=sharing"
+  },
+{
+    title:"Falabella: Retail in Colombia",
+    client:"Workforce Planning & Organizational Design",
+    role:"Group Project",
+    category:"HR Strategy",
+    featured:false,
+    summary:"A case analysis diagnosing why Falabella's department store and e-commerce growth in Colombia (2.6%) drastically underperformed Peru (11%) despite comparable market conditions, culminating in a Build-Buy-Borrow-Bridge talent and capability framework to close the gap.",
+    challenge:"Falabella, Colombia's 3rd largest market by revenue, faced stalled digital growth despite higher e-commerce penetration than Peru, driven by capability gaps in digital merchandising, data science, and omnichannel operations, all while competing against MercadoLibre for scarce local digital talent.",
+    approach:[
+      "Conducted a situation analysis comparing Colombia and Peru's market conditions, digital readiness, and competitive landscape (including MercadoLibre's scale advantage).",
+      "Identified core capability gaps in digital merchandising, marketplace management, data science/personalization engineering, and omnichannel operations talent.",
+      "Surfaced key organizational tensions, including a 2024 structural redesign that outpaced actual capability building, and the risk of alienating customers if physical stores closed before a credible digital alternative existed.",
+      "Applied a Build-Buy-Borrow-Bridge framework to sequence talent and capability solutions across different time horizons, from long-term internal capability building to immediate cross-market knowledge transfer."
+    ],
+    methods:[
+      "Situation Analysis",
+      "Competitive Benchmarking",
+      "Capability Gap Assessment",
+      "Build-Buy-Borrow-Bridge Framework",
+      "Organizational Design"
+    ],
+    outcome:"Recommended closing the Colombia/Peru growth gap by acquiring a Bogotá-based digital product team, building a centralized CMR personalization platform, borrowing scalable cloud and agile transformation capacity, and bridging the gap by upskilling store leaders and transferring Peru's omnichannel playbook to Colombia.",
+    tags:["Workforce Planning", "Organizational Design", "Talent Strategy", "Build-Buy-Borrow-Bridge"],
+    images:[],
+    link:"https://docs.google.com/presentation/d/1UkUgUBwdprv-dorRwy2HdlBLXH2p0h5xRUmfTwye_cM/edit?usp=sharing"
+  },
+  {
+    title:"From Learning to Behavior Change: Making GenAI Stick (and Why We Resist)",
+    client:"Learning & Development I",
+    role:"Author | Nick Van Dam & IE Business School",
+    category:"HR Strategy",
+    featured:false,
+    summary:"A research-based book chapter exploring the cognitive, psychological, and organizational barriers that keep GenAI training from translating into lasting workplace behavior change, and offering a practical framework for closing the learning-to-doing gap.",
+    challenge:"Organizations invest heavily in GenAI upskilling programs, yet adoption consistently stalls after training ends. The chapter tackles why this knowledge-to-practice disconnect happens, examining the neuroscience of decision-making, the psychological roots of AI resistance, and the structural gaps in how training is designed and delivered.",
+    approach:[
+      "Applied Kahneman's dual-process theory (System 1/System 2 thinking) alongside emerging 2026 research on 'System 3' (AI-augmented) thinking to explain how people cognitively process AI-assisted decisions.",
+      "Synthesized five decision-making modes, from pure intuition to full AI autopilot, to identify 'offloading' as the target state for effective human-AI collaboration.",
+      "Analyzed five root causes of AI resistance: fear of job displacement, distrust of opaque systems, identity threat, fear of dependence, and structural/cultural barriers, drawing on BCG, SHRM, Stanford HAI, and HBR research.",
+      "Diagnosed why training fails to convert into behavior change, citing SHRM data showing 62% of workers can't integrate AI into daily workflows despite training.",
+      "Proposed a three-part framework (Start with Why, Make It a Microhabit, Connect Learning to Actual Work) for designing AI upskilling that sticks, illustrated with a real-world case (Achmea's five-minute daily practice model)."
+    ],
+    methods:[
+      "Literature Review",
+      "Behavioral & Cognitive Psychology",
+      "Primary Research Interviews",
+      "Change Management Frameworks",
+      "L&D Program Design"
+    ],
+    outcome:"Produced a book chapter offering L&D professionals and employees a research-grounded framework for designing GenAI upskilling that translates into sustained behavior change, emphasizing microhabits, task-specific relevance, and continued critical evaluation of AI outputs over one-time training events.",
+    tags:["Learning & Development", "GenAI", "Behavior Change", "Change Management", "Organizational Psychology", "Upskilling"],
+    images:[],
+    link:"https://docs.google.com/document/d/1TO1OJfqSAl6Cb_jmCcXYyo4DwDIpp_R_mUS0dAY7WBU/edit?usp=sharing"
+  },
+  {
+    title:"AI in HR: Reflection on the Future of Work",
+    role:"Individual Essay",
+    category:"HR Strategy",
+    featured:false,
+    summary:"A personal reflection on the evolving role of AI in HR, examining the neuroscientific limits of AI (mentalizing and relational meaning-making), the ethical tradeoffs of designing an AI-driven claims processing agent, and a committed behavioral shift toward resisting cognitive surrender to AI tools.",
+    challenge:"Coming into the course believing AI would inevitably outcompete humans on efficiency and productivity, the reflection confronts that assumption by examining what AI genuinely cannot replicate, and by working through a real design tradeoff, balancing a board mandate for 25% cost reduction against a personal commitment to protecting the human workforce.",
+    approach:[
+      "Applied Bennet's Five Breakthroughs and Shaw & Nave's tri-system theory of cognition to identify mentalizing and relational meaning-making as uniquely human capabilities AI cannot replicate.",
+      "Worked through the design of 'Claimsbot 3000,' an AI agent for automating insurance claims processing, weighing an AI-Enhanced Expert (human-AI complement) archetype against a cost-driven headcount-reduction model under a board mandate.",
+      "Reflected on the concept of 'developmental debt' and its implications for entry-level talent pipelines as companies adopt AI at different paces.",
+      "Identified a personal instance of AI 'cognitive surrender' during a high-workload period and traced its impact on both work quality and learning.",
+      "Committed to a specific behavioral change: independently brainstorming and sitting with uncertainty before consulting AI, to preserve critical thinking and creative ownership."
+    ],
+    methods:[
+      "Reflective Writing",
+      "Tri-System Cognitive Theory",
+      "AI Agent Design",
+      "Ethical Decision-Making",
+      "Behavioral Commitment Planning"
+    ],
+    outcome:"Concluded with a concrete, ongoing behavioral commitment to counteract AI-driven cognitive surrender, prioritizing independent thinking and team deliberation before AI consultation, and a sharpened point of view on the limits of AI replacing human judgment in HR.",
+    tags:["AI in HR", "Future of Work", "Critical Thinking", "AI Ethics", "Organizational Change", "Self-Reflection"],
+    images:[],
+    link:"https://docs.google.com/document/d/1lDoJN9a_ImuWQfBotRI28Bxn60LQsF6JoFdhgFrzJ_E/edit?usp=sharing"
+  },
+  {
+    title:"Navigating Digital Workplace Paradoxes: Essay",
+    role:"Individual Essay",
+    category:"HR Strategy",
+    featured:false,
+    summary:"An essay applying Kokshagina and Schneider's digital workplace paradox framework to a personal experience transitioning from in-person to remote work, illustrating the autonomy and interaction paradoxes and proposing practical strategies to mitigate their effects.",
+    challenge:"Digitalization creates persistent, unresolvable tensions for professionals, such as the autonomy paradox (flexibility vs. constant connectivity) and the interaction paradox (more communication channels vs. weaker collaboration), often without workers having the vocabulary to name what they're experiencing until it's reflected on.",
+    approach:[
+      "Applied Kokshagina and Schneider's academic framework on digital workplace paradoxes to a first-person account of shifting from in-office to remote work.",
+      "Analyzed how the loss of structured, synchronous brainstorming sessions in favor of scattered emails degraded collaboration quality and increased cognitive load (interaction paradox).",
+      "Examined the pressure to respond to after-hours communications across time zones as a manifestation of the autonomy paradox.",
+      "Identified specific interventions, requesting dedicated remote meetings over ad hoc emails and establishing work-life boundary norms, that resolved the tension in practice."
+    ],
+    methods:[
+      "Reflective Essay Writing",
+      "Academic Framework Application",
+      "Case-Based Analysis",
+      "Remote Work Best Practices"
+    ],
+    outcome:"Concluded that awareness of digital workplace paradoxes, paired with intentional strategies like tailoring communication to individual working styles and respecting work-life boundaries, empowers professionals and leaders to build more productive and balanced remote work environments.",
+    tags:["Digital Workplace", "Remote Work", "Autonomy Paradox", "Organizational Behavior", "Work-Life Balance"],
+    images:[],
+    link:"https://docs.google.com/document/d/1yNqqJ4783lCH7FKEMXfpJgck5AG13iH8aOGoUjAmZHk/edit?usp=sharing"
+  },
+  {
+    title:"WWE vs. Wimbledon: Strategic Growth in the Attention Economy",
+    client:"Business Strategy",
+    role:"Individual Essay",
+    category:"Corporate Strategy",
+    featured:false,
+    summary:"An individual case analysis comparing WWE and Wimbledon's strategic approaches to internationalization, digital expansion, and audience engagement, using the Five Major Elements of Strategy framework to explain how each organization balances tradition with innovation to stay culturally relevant.",
+    challenge:"In an attention economy where media and sports organizations compete for viewership, WWE and Wimbledon, despite operating in vastly different structures (public vs. private) and appealing to different demographics, both needed strategies to internationalize, digitize, and attract younger audiences without eroding their core brand identity.",
+    approach:[
+      "Applied Porter and Kramer's shared value framework to analyze how both organizations create local cluster development and social resonance through international expansion (e.g., Wimbledon in India/US, WWE's gender equity initiatives).",
+      "Evaluated media and broadcasting partnerships (Netflix, ESPN, BBC, Roblox) through Gomes-Casseres' laws of business combinations to explain how each organization extends reach and creates joint value.",
+      "Used the Five Major Elements of Strategy (Arenas, Vehicles, Differentiators, Staging, Economic Logic) to construct comparative Strategy Diamonds for WWE and Wimbledon.",
+      "Contrasted WWE's public, fast-paced, externally-driven growth model (e.g., merger with TKO) against Wimbledon's private, deliberate, internally-controlled approach to preserving heritage and exclusivity."
+    ],
+    methods:[
+      "Case Analysis",
+      "Strategy Diamond Framework (Hambrick & Fredrickson)",
+      "Shared Value Framework (Porter & Kramer)",
+      "Comparative Competitive Analysis",
+      "Business Combinations Theory"
+    ],
+    outcome:"Concluded that despite differing ownership structures, audiences, and economic logics, both organizations sustain competitive advantage and cultural relevance through internationalization, strategic media partnerships, and disciplined differentiation, offering a transferable lens for evaluating growth strategy in attention-driven industries.",
+    tags:["Business Strategy", "Strategy Diamond", "Shared Value", "Media & Entertainment", "Competitive Advantage", "Internationalization"],
+    images:[],
+    link:"https://docs.google.com/document/d/1k32mEycxapPHs9nibRFGKD2u5lyF46Kr0ooaIbmYc4o/edit?usp=sharing"
+  },
+  {
+    title:"Redundancy Process Workflow ",
+    client:"HR Operations & Systems",
+    role:"Individual Project",
+    category:"HR Strategy",
+    featured:false,
+    summary:"A cross-functional swimlane process map designing the end-to-end redundancy (layoff) workflow, from formal decision approval through offboarding, coordinating HRBP, Manager, HR Ops, Payroll, IT, Legal, and Employee touchpoints across an HRIS-driven case management system.",
+    challenge:"Employee redundancy processes span multiple functions and systems, HRBP decision-making, legal compliance review, manager communication, payroll processing, and IT access removal, creating risk of miscommunication, compliance gaps, or delays if not clearly sequenced and owned.",
+    approach:[
+      "Mapped the full redundancy lifecycle as a swimlane diagram across seven stakeholders: HRBP, Manager, HR Ops, Payroll, IT, Legal, and Employee.",
+      "Built in two key decision/compliance gates, business and role alignment verification and Legal compliance approval, before any employee notification occurs.",
+      "Sequenced the notification and transition phase, including manager briefing, meeting scheduling, and delivery of the redundancy notification alongside real-time HRIS updates.",
+      "Coordinated parallel post-notification workstreams across Payroll (final payment processing) and IT (system access removal and equipment recovery) to run concurrently rather than sequentially.",
+      "Designed employee support touchpoints (support services, knowledge transfer, escalation paths) to run alongside the administrative process, closing with full case closure in the HRIS."
+    ],
+    methods:[
+      "Process Mapping",
+      "Swimlane Diagramming",
+      "HRIS Case Management",
+      "Cross-Functional Workflow Design",
+      "Compliance Gate Design"
+    ],
+    outcome:"Delivered a clear, auditable end-to-end redundancy process that defines ownership at every step, builds in compliance checkpoints before employee notification, and coordinates Payroll and IT offboarding tasks in parallel to minimize delays and ensure a consistent employee experience.",
+    tags:["HR Operations", "Process Design", "HRIS", "Offboarding", "Workflow Mapping", "Compliance"],
+    images:["/mnt/user-data/uploads/HR_Ops___Systems_Individual_Project_drawio__3_.png"],
+    link:"https://drive.google.com/file/d/1kpCwkLHtRj2NiueoqlPmpmFAfxAO1P6E/view?usp=sharing"
+  },
+];
+
+const allProjects = [...consultingProjects, ...hrProjects];
+
+/* ---------- Experience data ---------- */
+const experience = [
+  { when:"Jul 2024 – Oct 2025", role:"Organizational Analyst (remote)", org:"Factual Rational LLC", loc:"Austin, TX",
+    desc:"Conducted capacity analysis for an Austin-based homelessness nonprofit, synthesizing data into board-level recommendations that informed a leadership proposal to scale the organization 5x by 2030. Coordinated a 9-person consulting team and served as primary point of contact between client and team." },
+  { when:"Sep 2023 – Jun 2025", role:"English Language & Culture Assistant", org:"NALCAP (C.E.I.P. Claudio Moyano)", loc:"Madrid, Spain",
+    desc:"Designed and facilitated learning for 125 primary students across proficiency levels through curriculum delivery, assessment preparation, and individualized coaching within the Spanish public school system." },
+  { when:"Jan 2023 – Apr 2023", role:"Fellow", org:"The Cicero Institute", loc:"Austin, TX",
+    desc:"Conducted policy research on homelessness in Texas, synthesizing data and stakeholder insights to inform reports and advance actionable policy initiatives." },
+  { when:"May 2021 – Aug 2023", role:"Senior Leadership Team & Counselor", org:"Sanborn Western Camps", loc:"Florissant, CO",
+    desc:"Trained and managed a team of 12 staff serving 48+ campers, conducting performance reviews and coaching. Previously led outdoor education and youth development programming as a counselor." },
+  { when:"Sep 2021 – Dec 2021", role:"Communications Intern", org:"The Salvation Army", loc:"Austin, TX",
+    desc:"Helped produce the FY21 annual report and supported donor engagement through targeted communications, strengthening relationships with key stakeholders." },
+  { when:"Jan 2021 – May 2021", role:"Client Services Intern", org:"Dress for Success Austin", loc:"Austin, TX",
+    desc:"Supported career development and workforce readiness services for women in career transition, building client relations and case-management processes." }
+];
+
+/* ---------- helpers ---------- */
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(d){
+  if(!d) return "";
+  if(d==="present") return "Present";
+  const [y,m]=d.split("-"); return MONTHS[parseInt(m,10)-1]+" "+y;
+}
+function dateRange(p){
+  const a=fmt(p.dateStart), b=fmt(p.dateEnd);
+  return a===b?a:`${a} – ${b}`;
+}
+function sortKey(p){
+  const d=p.dateEnd==="present"?"2099-12":(p.dateEnd||p.dateStart||"");
+  const n=parseInt(String(d).replace("-",""),10);
+  return isNaN(n)?0:n;
+}
+function metaLine(parts){
+  return parts.filter(Boolean).join(" · ");
+}
+
+/* ---------- shared card + wiring ---------- */
+function cardHTML(p){
+  return `
+    <article class="card" tabindex="0" data-i="${allProjects.indexOf(p)}" role="button" aria-label="Open ${p.title}">
+      ${p.featured?'<span class="star" title="Featured"><svg width="18" height="18" fill="currentColor"><path d="M9 1l2.3 4.7 5.2.8-3.8 3.6.9 5.1L9 12.9 4.4 15.3l.9-5.1L1.5 6.5l5.2-.8z"/></svg></span>':''}
+      <span class="cat">${p.category}</span>
+      <h3>${p.title}</h3>
+      <div class="client">${metaLine([p.client, p.role, dateRange(p)])}</div>
+      <p class="sum">${p.summary}</p>
+      <div class="card-tags">${p.tags.slice().sort((a,b)=>a.localeCompare(b)).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+    </article>`;
+}
+function wireCards(container){
+  container.querySelectorAll('.card').forEach(c=>{
+    const open=()=>openModal(allProjects[c.dataset.i]);
+    c.addEventListener('click',open);
+    c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+  });
+}
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+/* ---------- Talent Consulting Projects (simple grid) ---------- */
+const consultingGrid=document.getElementById('consulting-grid');
+consultingGrid.innerHTML=consultingProjects.slice()
+  .sort((a,b)=>sortKey(b)-sortKey(a)).map(cardHTML).join("");
+wireCards(consultingGrid);
+
+/* ---------- Selected HR Projects (search + filter + sort) ---------- */
+let activeCat="All";
+const grid=document.getElementById('grid');
+const countEl=document.getElementById('count');
+const chipsEl=document.getElementById('chips');
+const searchEl=document.getElementById('search');
+
+const cats=["All",...Array.from(new Set(hrProjects.map(p=>p.category))).sort((a,b)=>a.localeCompare(b))];
+chipsEl.innerHTML=cats.map(c=>`<button class="chip${c==='All'?' active':''}" data-cat="${c}">${c}</button>`).join("");
+chipsEl.querySelectorAll('.chip').forEach(ch=>{
+  ch.addEventListener('click',()=>{
+    activeCat=ch.dataset.cat;
+    chipsEl.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+    ch.classList.add('active');
+    render();
+  });
+});
+searchEl.addEventListener('input',render);
+
+function render(){
+  const q=searchEl.value.trim().toLowerCase();
+  let list=hrProjects.filter(p=>{
+    const catOk=activeCat==="All"||p.category===activeCat;
+    const hay=(p.title+" "+p.client+" "+(p.sector||"")+" "+p.summary+" "+p.tags.join(" ")+" "+p.category).toLowerCase();
+    return catOk && (q===""||hay.includes(q));
+  });
+  list.sort((a,b)=> a.title.localeCompare(b.title));
+
+  countEl.textContent=`Showing ${list.length} of ${hrProjects.length} project${hrProjects.length!==1?"s":""}`;
+
+  grid.innerHTML = list.length ? list.map(cardHTML).join("")
+    : `<div class="empty">No HR projects added yet. Add your Master's projects in the code (see the comment by <code>const hrProjects</code>), or adjust your search.</div>`;
+
+  wireCards(grid);
+}
+render();
+
+/* ---------- modal ---------- */
+const modalBg=document.getElementById('modalBg');
+const modal=document.getElementById('modal');
+function openModal(p){
+  modal.innerHTML=`
+    <button class="close" aria-label="Close" onclick="closeModal()">×</button>
+    <span class="cat">${p.category}</span>
+    <h2>${p.title}</h2>
+    <div class="meta">${metaLine([p.client, p.role, dateRange(p)])}</div>
+    <h4>The challenge</h4><p>${p.challenge}</p>
+    <h4>Approach</h4><ul>${p.approach.map(a=>`<li>${a}</li>`).join("")}</ul>
+    <h4>Methods &amp; tools</h4><div class="methods">${p.methods.map(m=>`<span class="tag">${m}</span>`).join("")}</div>
+    <h4>Outcome</h4><div class="outcome"><p>${p.outcome}</p></div>
+    ${p.images&&p.images.length?`<h4>Gallery</h4><div class="modal-gallery">${p.images.map(src=>`<img src="${src}" alt="${p.title}" loading="lazy" />`).join("")}</div>`:""}
+    ${p.link?`<h4>Link</h4><p><a href="${p.link}" target="_blank" rel="noopener">View project →</a></p>`:""}
+  `;
+  modalBg.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){modalBg.classList.remove('open');document.body.style.overflow='';}
+modalBg.addEventListener('click',e=>{if(e.target===modalBg)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ---------- experience render ---------- */
+document.getElementById('timeline').innerHTML=experience.map(e=>`
+  <div class="tl-item">
+    <div class="when">${e.when}</div>
+    <h3>${e.role}</h3>
+    <div class="org">${e.org} <span>· ${e.loc}</span></div>
+    <p>${e.desc}</p>
+  </div>`).join("");
+
+/* ---------- nav + reveal ---------- */
+const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('show'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('show')));
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+render();
+</script>
+</body>
+</html>
