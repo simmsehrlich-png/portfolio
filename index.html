@@ -672,7 +672,7 @@ const hrProjects = [
   title: "TalentAI: Agentic Recruitment Assistant",
   client: "Agentic AI for HR",
   role: "Group Project",
-  category: "AI & Automation",
+  category: ["Talent Acquisition", "AI & Automation"],
   featured: false,
   summary: "Built an AI agent that automates resume screening and candidate follow-up emails, cutting manual recruiter workload.",
   challenge: "Recruiters spend 30-90 seconds per resume and 2-6 hours manually screening ~250 applications per vacancy, leading to slow, inconsistent hiring decisions.",
@@ -683,9 +683,9 @@ const hrProjects = [
     "Designed a human-in-the-loop gate for borderline match scores (55–70) so recruiters approve/edit AI decisions before anything is sent.",
     "Set up automated Gmail follow-up emails with separate templates for 'advance' vs 'reject' outcomes."
   ],
-  methods: ["n8n", "GPT-4.1", "Prompt Engineering", "Gmail API", "Google Sheets", "SALT Framework", "McKinsey 7S"],
-  outcome: "Delivered a working automation demo that scans CVs against job requirements, produces pass/reject decisions with match scores, and sends personalized follow-up emails automatically — reducing manual screening time while keeping a human reviewer in the loop for ambiguous cases.",
-  tags: ["AI Agent", "Recruitment", "Automation", "HR Tech"],
+  methods: ["Prompt Engineering", "SALT Framework", "McKinsey 7S"],
+  outcome: "Delivered a working automation demo that scans CVs against job requirements, produces pass/reject decisions with match scores, and sends personalized follow-up emails automatically, reducing manual screening time while keeping a human reviewer in the loop for ambiguous cases.",
+  tags: ["AI Agent", "Recruitment", "Automation", "HR Technology"],
   images: [],
   link: "https://canva.link/hz2rpgnct79yf7c"
 },
@@ -798,23 +798,23 @@ const hrProjects = [
   link: "https://canva.link/t9jxk5m2n0g58q1"
 },
 {
-  title: "Talent System Audit & Blueprint (MBN Model) at Company X",
+  title: "Talent System Audit & Blueprint at Company X",
   client: "Talent Management",
   role: "Group Project",
   category: "Talent Management",
   featured: false,
   summary: "Audited an insurance company's talent system against the 'More, Better, Now' (MBN) framework and designed a phased blueprint to build an internal talent marketplace and strengthen succession depth.",
-  challenge: "Assess Company X's current talent management practices against the 10 levers of the MBN model and design a roadmap to close capability gaps, reduce reliance on external hiring, and strengthen succession pipelines for critical roles (actuaries, IT talent).",
+  challenge: "Assess Company X's current talent management practices against the 10 levers of the More, Better, Now model and design a roadmap to close capability gaps, reduce reliance on external hiring, and strengthen succession pipelines for critical roles (actuaries and IT talent).",
   approach: [
     "Conducted an interview with a former HRBP and current HR Ops Specialist, combined with a review of internal and public company documents.",
     "Rated the organization across all 10 MBN levers (Hire Well, Drive Performance, Retain the Best, etc.), identifying strong areas like performance reviews and IDPs alongside gaps in retention risk tracking and succession depth.",
     "Mapped a system coherence analysis comparing what the company needs to succeed against what its current talent system actually delivers, and where the gaps are.",
-    "Designed three core principles for the future state: HRBP as 'talent conductor,' an internal talent marketplace, and a skills-first organization.",
+    "Designed 3 core principles for the future state: HRBP as 'talent conductor,' an internal talent marketplace, and a skills-first organization.",
     "Built a 3-phase, 24-month roadmap: foundational skills taxonomy (months 0-6), a pilot internal talent marketplace in Madrid (months 6-15), and full integration into workforce and succession planning (months 15-24).",
     "Defined success metrics including a projected 25% increase in internal fill rate, 20-25% reduction in external hiring, and 10-15% increase in internal mobility rate."
   ],
-  methods: ["MBN (More, Better, Now) Framework", "Stakeholder Interviews", "Skills Taxonomy Design", "Succession Planning", "SAP SuccessFactors"],
-  outcome: "Delivered a 24-month blueprint projecting stronger succession depth in critical roles (from 1-2 to 2-3 ready successors), reduced external hiring, and an internal talent marketplace expected to be used by 70-80% of leaders within two years.",
+  methods: ["MBN (More, Better, Now) Framework", "Stakeholder Interviews", "Skills Taxonomy Design", "Succession Planning"],
+  outcome: "Delivered a 24-month blueprint projecting stronger succession depth in critical roles (from 1-2 to 2-3 ready successors), reduced external hiring, and an internal talent marketplace expected to be used by 70-80% of leaders within 2 years.",
   tags: ["Talent Management", "Succession Planning", "Internal Mobility", "Skills-Based Organization", "HR Strategy"],
   images: [],
   link: "https://canva.link/muapcd3vfllxe41"
@@ -976,13 +976,13 @@ const hrProjects = [
     role:"Group Project",
     category:"Talent Management",
     featured:false,
-    summary:"A consulting proposal diagnosing TechNova's 21% voluntary turnover (vs. 15% industry benchmark) and designing a three-pillar retention strategy projected to generate $8.6M in annual cost avoidance by Year 3.",
+    summary:"A consulting proposal diagnosing TechNova's 21% voluntary turnover (vs. 15% industry benchmark) and designing a 3-pillar retention strategy projected to generate $8.6M in annual cost avoidance by Year 3.",
     challenge:"TechNova, a fast-growing AI & Cloud solutions company, faced a voluntary turnover rate of 21% versus a 15% industry benchmark, costing an estimated $30M+ annually. The crisis was concentrated in Engineering & Product (30% turnover, 40% of workforce) and among mid-career employees at the 3–7 year tenure mark, who left at a rate of 35% company-wide, threatening institutional knowledge and innovation capacity.",
     approach:[
       "Conducted a root cause analysis using exit interview data (n=47), quarterly engagement surveys, and an attrition heatmap segmented by department and tenure band.",
-      "Built a MECE framework identifying three root causes: no visible career path, uncompetitive pay, and burnout/high workload.",
+      "Built a MECE framework identifying 3 root causes: no visible career path, uncompetitive pay, and burnout/high workload.",
       "Mapped stakeholder needs and fears (CHRO, CFO, Line Managers, High-Risk Employees, HR Team) using a Mendelow power/interest matrix to shape a change management plan.",
-      "Designed three strategic pillars — Career Growth, Compensation, and Leading for Wellbeing — translated into six actionable initiatives with owners, timing, and success metrics.",
+      "Designed 3 strategic pillars — Career Growth, Compensation, and Leading for Wellbeing — translated into 6 actionable initiatives with owners, timing, and success metrics.",
       "Developed a phased implementation roadmap (Q1–Q4) and a quantified business case with ROI modeling, budget breakdown, and risk mitigation strategies."
     ],
     methods:[
@@ -994,7 +994,7 @@ const hrProjects = [
       "Business Case / ROI Modeling",
       "Scenario Planning"
     ],
-    outcome:"Delivered a board-ready proposal recommending a $3.65M investment (8% of existing HR budget) across six initiatives, targeting a reduction in mid-career turnover from 35% to 20%, an engagement score increase from 62 to 72, and closing the pay gap vs. market from -10% to 0% — projected to avoid $8.6M in annual turnover costs by Year 3.",
+    outcome:"Delivered a board-ready proposal recommending a $3.65M investment (8% of existing HR budget) across 6 initiatives, targeting a reduction in mid-career turnover from 35% to 20%, an engagement score increase from 62 to 72, and closing the pay gap vs. market from -10% to 0% — projected to avoid $8.6M in annual turnover costs by Year 3.",
     tags:["HR Strategy","Talent Retention","Employee Engagement","Compensation Analysis","Change Management","Business Case Development"],
     images:[],
     link:"https://canva.link/pplwhdcf41eoxn6"
@@ -1036,14 +1036,14 @@ const hrProjects = [
     role:"Group Project",
     category:"Wellbeing",
     featured:false,
-    summary:"A metrics-led sentiment diagnostic for a Sales team with 28.1% annualized attrition, identifying a collapsed Values & Ethics trust gap as the root cause and proposing a three-part intervention framework projected to deliver a 2.4x return on investment.",
+    summary:"A metrics-led sentiment diagnostic for a Sales team with 28.1% annualized attrition, identifying a collapsed Values & Ethics trust gap as the root cause and proposing a 3-part intervention framework projected to deliver a 2.4x return on investment.",
     challenge:"The Sales team faced an annualized attrition rate of 28.1%, more than double the 13% tech industry benchmark, with 8 exits against only 6 hires over 9 months. The team scored lowest of any business unit on a happiness index (60.0/100) and remained trapped in persistently negative eNPS territory (-4.3 to -13.3) with no positive months. Modeled financial exposure from inaction reached €484,000 annually in excess turnover, lost productivity, and absenteeism costs.",
     approach:[
       "Diagnosed sentiment and attrition drivers using a metrics-led framework spanning eNPS trends, happiness index scores, and exit interview data.",
-      "Isolated Values & Ethics alignment as the team's weakest driver by far, tracking a monthly trend (Feb–Jun 2026) that flatlined between 1.5 and 2.2 against a 7.0 benchmark — a systemic deficit of over 70% below target.",
+      "Isolated Values & Ethics alignment as the team's weakest driver by far, tracking a monthly trend (Feb–Jun 2026) that flatlined between 1.5 and 2.2 against a 7.0 benchmark (a systemic deficit of over 70% below target).",
       "Distinguished a trust and leadership breakdown from operational confusion by confirming functional clarity (strategic clarity, roles, OKRs) scored exceptionally well.",
       "Identified management inconsistency as a secondary driver, with 20% of leavers citing poor manager relationships despite managers' strong technical performance.",
-      "Designed a three-part intervention framework: quarterly live leadership Q&As with anonymous feedback channels, manager coaching training tied to regular feedback loops, and a workload recalibration exercise for high-pressure seasonal periods.",
+      "Designed a 3-part intervention framework: quarterly live leadership Q&As with anonymous feedback channels, manager coaching training tied to regular feedback loops, and a workload recalibration exercise for high-pressure seasonal periods.",
       "Built a financial model comparing the cost of inaction (€483,596 annualized) against a proposed program investment (€65K–€107K), projecting a €311,342 Year 1 benefit.",
       "Defined a target telemetry KPI matrix (Values & Ethics Index, eNPS trajectory, coaching completion, voluntary attrition) with a quarterly/monthly/annual evaluation protocol."
     ],
@@ -1343,8 +1343,8 @@ const hrProjects = [
   summary:"Used regression modeling and workforce data to identify the true drivers of restaurant performance, disproving key assumptions about talent and shift design.",
   challenge:"A private equity-backed restaurant chain had exhausted traditional cost-cutting and marketing levers in its turnaround. Frontline turnover sat at 109% annually versus a 30% competitor benchmark, and customer satisfaction lagged at 43% versus 90% for the leading competitor.",
   approach:[
-    "Defined three success metrics: reduce turnover 59% to the 50% industry benchmark, boost customer satisfaction 47% to match the leading competitor, and drive store-level revenue without increasing headcount.",
-    "Formed three hypotheses across talent, operations, and retention, then tested each against operational, HRIS, and third-party data (Pymetrics cognitive/personality assessments, Humanyze sociometric badges, and McKinsey Organizational Health Index survey data).",
+    "Defined 3 success metrics: reduce turnover 59% to the 50% industry benchmark, boost customer satisfaction 47% to match the leading competitor, and drive store-level revenue without increasing headcount.",
+    "Formed 3 hypotheses across talent, operations, and retention, then tested each against operational, HRIS, and third-party data (Pymetrics cognitive/personality assessments, Humanyze sociometric badges, and McKinsey Organizational Health Index survey data).",
     "Deployed multivariate regression models, controlling for covariates like prior order volume, service mode, and time of day to isolate true performance drivers.",
     "Engineered a custom Complexity Scoring Index to normalize order difficulty, enabling fair comparison of service speed across ticket types.",
     "Audited and cleaned inconsistent HRIS and training data (e.g., standardizing tenure formats, excluding a training-completion metric that measured platform time rather than actual learning) to protect the integrity of the models."
@@ -1355,8 +1355,8 @@ const hrProjects = [
     "HRIS Data Integration",
     "Bias Mitigation & Data Validation"
   ],
-  outcome:"All three initial hypotheses were disproven by the data, redirecting strategy: shift length (not emotional intelligence or managerial tenure/pay) was the strongest driver of performance. Recommendations to shorten shifts, re-engineer hiring around 'Taskmaster' cognitive traits, and redesign variable pay around operational KPIs were projected to generate $600K–$800K in annual cost avoidance and unlock 8–12 additional orders per hour per store across a 280-store network.",
-  tags:["People Analytics", "Regression Modeling", "Workforce Planning", "Talent Acquisition", "Retail/QSR", "Data-Driven HR"],
+  outcome:"All 3 initial hypotheses were disproven by the data, redirecting strategy: shift length (not emotional intelligence or managerial tenure/pay) was the strongest driver of performance. Recommendations to shorten shifts, re-engineer hiring around 'Taskmaster' cognitive traits, and redesign variable pay around operational KPIs were projected to generate $600K–$800K in annual cost avoidance and unlock 8–12 additional orders per hour per store across a 280-store network.",
+  tags:["People Analytics", "Regression Modeling", "Workforce Planning", "Talent Acquisition", "Data-Driven HR"],
   images:[],
   link:"https://drive.google.com/file/d/1a7k1XlXeHW7zSnIq_snpbPLdkf5K-75w/view?usp=sharing"
 },
@@ -1395,7 +1395,7 @@ const hrProjects = [
   summary:"Built a predictive attrition model for a tech company losing $13.8M annually to turnover, identifying overtime and compensation as the strongest flight-risk drivers.",
   challenge:"TechSolutions Inc. faced a 16.1% baseline attrition rate, costing an estimated $13.8M annually in replacement costs. The company needed to understand what was actually driving departures across 1,470 employee records, and identify which interventions would move the needle rather than guessing based on demographics.",
   approach:[
-    "Cleaned and prepared the dataset: dropped zero-variance fields, one-hot encoded categorical variables like Department and Job Role, applied feature scaling, and confirmed zero null values across all 1,470 records.",
+    "Cleaned and prepared the dataset: dropped zero-variance fields, one-hot encoded categorical variables like Department and Job Role, applied feature scaling, and confirmed 0 null values across all 1,470 records.",
     "Used mutual information scores and point-biserial correlation to isolate the features with real predictive signal before modeling.",
     "Deployed a Random Forest Classifier (150 decision trees) with class-imbalance correction to address the 84%/16% stayer-leaver skew, outperforming a Logistic Regression baseline.",
     "Prioritized Recall over raw accuracy in model tuning, since missing a true leaver (a false negative) costs far more than a false positive that merely triggers a manager check-in.",
@@ -1408,8 +1408,8 @@ const hrProjects = [
     "Predictive Modeling",
     "Python"
   ],
-  outcome:"The model correctly flagged 79.6% of actual leavers in unseen validation data at 84.1% test accuracy, with only a modest train/test gap indicating limited overfitting. Analysis showed overtime was the single strongest predictor (a 30.5% attrition rate vs. a 10.1% baseline, roughly 3x), and identified a five-factor high-risk cohort representing the majority of expected departures. Recommended interventions, overtime caps, junior salary benchmarking, a restructured 90-day onboarding program, and manager-led stay interviews, were projected to recover approximately $2.8M annually through a targeted 20% reduction in attrition.",
-  tags:["People Analytics", "Predictive Modeling", "Attrition", "Machine Learning", "HR Strategy", "Workforce Planning"],
+  outcome:"The model correctly flagged 79.6% of actual leavers in unseen validation data at 84.1% test accuracy, with only a modest train/test gap indicating limited overfitting. Analysis showed overtime was the single strongest predictor (a 30.5% attrition rate vs. a 10.1% baseline, roughly 3x), and identified a 5-factor high-risk cohort representing the majority of expected departures. Recommended interventions, overtime caps, junior salary benchmarking, a restructured 90-day onboarding program, and manager-led stay interviews, were projected to recover approximately $2.8M annually through a targeted 20% reduction in attrition.",
+  tags:["Data Analysis", "Predictive Modeling", "Attrition", "Machine Learning", "HR Strategy", "Workforce Planning"],
   images:[],
   link:"https://ai.studio/apps/5de96160-c97b-4661-a92a-d5eb8840d8c8"
 },
