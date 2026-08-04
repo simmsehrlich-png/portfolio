@@ -25,35 +25,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!--
-  ============================================================================
-  HOW TO ADD A PROJECT  (you have many, this is the only thing you edit)
-  ============================================================================
-  Consulting projects live in `const consultingProjects`; your other
-  Master's projects go in `const hrProjects` (further down).
-  Copy one block, paste it, and fill in the fields. Field guide:
-
-    title        : Project name (string)
-    client       : Organization / company (string)
-    sector       : Industry, e.g. "Pharma", "Retail" (string)
-    role         : Your role on the project (string)
-    dateStart    : "YYYY-MM"  e.g. "2025-09"
-    dateEnd      : "YYYY-MM" or "present"
-    category     : Groups + filters the project. Reuse exact spelling to group.
-    featured     : true / false  (true = also shown in the Featured row + home)
-    summary      : One sentence shown on the card
-    challenge    : The problem / brief (string)
-    approach     : What you did, an array of bullet strings  [ "...", "..." ]
-    methods      : Tools / frameworks, an array of short strings  [ "...", "..." ]
-    outcome      : The result / impact (string)
-    tags         : array of short keyword strings (also searchable)
-    images       : optional array of image paths/URLs shown in the detail view
-    link         : optional external URL ("" if none)
-
-  Categories and tags appear automatically in the filters once used.
-  ============================================================================
--->
-
 <style>
   :root{
     --navy-deep:#0B2545;
@@ -587,8 +558,7 @@
 
 <script>
 /* =========================================================================
-   PROJECTS: the three consulting projects below. See top of file
-   for the field guide. Categories & tags appear in the filters automatically.
+   PROJECTS
    ========================================================================= */
 const consultingProjects = [
   {
@@ -611,7 +581,7 @@ const consultingProjects = [
     outcome:"A ready-to-deploy 12-week onboarding program with feedback loops and milestone checkpoints designed to improve new-hire ramp-up and retention.",
     tags:["Onboarding","Employee experience","Gap analysis","Benchmarking"],
     images:["hr-ops-project.jpg"],
-    link:""
+    link:"https://docs.google.com/presentation/d/1MDppYLTQwG0S46kKSSGPHRLOMHCL3vOu/edit?usp=sharing"
   },
   {
     title:"Global Talent Pipeline & Market-Entry Strategy",
@@ -633,7 +603,7 @@ const consultingProjects = [
     outcome:"A market-entry talent strategy spanning five regions, with ATS guidance and EVP positioning to support international hiring.",
     tags:["Talent acquisition","EVP","Market entry","Sourcing","ATS"],
     images:["project-gallery-2.jpg"],
-    link:""
+    link:"https://drive.google.com/file/d/1ZBgB4GVl0CjDCymnLstTsgk9EvjtyDHs/view?usp=sharing"
   },
   {
     title:"AI-Driven Workforce Transformation for Global IT",
@@ -655,17 +625,11 @@ const consultingProjects = [
     outcome:"Delivered a workforce transformation roadmap covering org redesign, talent attraction, and retention for a ~800-person global IT organization.",
     tags:["Workforce planning","AI","Org design","Retention","Technology"],
     images:["project-gallery-3.jpg"],
-    link:""
+    link:"https://drive.google.com/file/d/1nJ7LuAP2tjQCB0pPciAdfuK3Lp9FGDs9/view?usp=sharing"
   }
 
 ];
 
-/* =========================================================================
-   SELECTED HR PROJECTS: add your other Master's class / coursework
-   projects here (you have many). Copy the TEMPLATE block, paste it inside
-   the [ ], and fill in. New categories & tags appear in the
-   "Selected HR Projects" filters automatically.
-   ========================================================================= */
 const hrProjects = [
 
   {
@@ -687,7 +651,7 @@ const hrProjects = [
   outcome: "Delivered a working automation demo that scans CVs against job requirements, produces pass/reject decisions with match scores, and sends personalized follow-up emails automatically, reducing manual screening time while keeping a human reviewer in the loop for ambiguous cases.",
   tags: ["AI Agent", "Recruitment", "Automation", "HR Technology"],
   images: [],
-  link: "https://canva.link/hz2rpgnct79yf7c"
+  link: "https://drive.google.com/file/d/1dzfgre4SkNpW2Nk2Owvz6FEALsoDamF-/view?usp=sharing"
 },
 {
   title: "Innovation with Impact at Hangar 51 (IAG)",
@@ -708,7 +672,7 @@ const hrProjects = [
   outcome: "Concluded that Hangar 51's success stems from structural freedom (time-boxed sprints, external partnerships, fast decision cycles) that a large parent company can't easily replicate due to bureaucracy and risk aversion, despite the accelerator producing tangible innovation wins like the ZeroAvia hydrogen-electric aircraft partnership.",
   tags: ["Culture", "Innovation", "Organizational Design", "Change Management"],
   images: [],
-  link: "https://canva.link/khrwxi8ylp3p91u"
+  link: "https://drive.google.com/file/d/1GZNA-Gv-0IqU8nMck_BNpRIJ_1bCLs8C/view?usp=sharing"
 },
 {
   title: "Performance Management Proposal at Company X",
@@ -729,7 +693,7 @@ const hrProjects = [
   outcome: "Delivered a proposal showing that while Company X had strong underlying HR tools, they weren't working together to support the business strategy, and recommended changes that would shift the system from administrative compliance toward supporting the company's growth ambitions.",
   tags: ["Performance Management", "Talent Strategy", "HR Consulting", "Employee Experience"],
   images: [],
-  link: "https://canva.link/97iy6ynjlyah49c"
+  link: "https://drive.google.com/file/d/1xw3V3mkDB1S1xg_nXBGvvm4fSSW9HS1p/view?usp=sharing"
 },
 {
   title: "Starbucks Investment Analysis for Warren Buffett",
@@ -751,7 +715,7 @@ const hrProjects = [
   outcome: "Recommended investing in Starbucks, citing a durable competitive advantage and consistent top and bottom-line improvement, while flagging that past performance and revenue growth alone don't guarantee future profitability.",
   tags: ["Financial Analysis", "Investment Strategy", "P&L Analysis", "Finance for HR"],
   images: [],
-  link: "https://canva.link/ilt5t4qnhjcygg7"
+  link: "https://drive.google.com/file/d/1wRYyU-CegEBBcCddiLEeTsCJh8iRtyvK/view?usp=sharing"
 },
 {
   title: "Strategic Repositioning Analysis for Workday",
@@ -773,7 +737,7 @@ const hrProjects = [
   outcome: "Delivered a strategic repositioning roadmap recommending Workday shift from a reporting-focused ERP to an autonomous decision-orchestration platform, projecting measurable outcomes like a 10-15% reduction in administrative HR costs and reduced talent acquisition costs through internal mobility.",
   tags: ["Digital Strategy", "HR Technology", "Business Model Innovation", "Competitive Analysis", "AI Strategy"],
   images: [],
-  link: "https://canva.link/ypc8mdiod856xk7"
+  link: "https://drive.google.com/file/d/116zckB1MOC3iKgmfd3-71eZ-cNxLRyf5/view?usp=sharing"
 },
 {
   title: "Future Leaders Accelerator Coaching Program at Citi",
@@ -795,7 +759,7 @@ const hrProjects = [
   outcome: "Delivered a business case projecting a 70% internal promotion rate (vs. 38% company average), 85% succession coverage for critical roles, and a coaching cost roughly 1.6x cheaper per leader developed than external executive hiring.",
   tags: ["Executive Coaching", "Leadership Development", "Succession Planning", "Talent Retention", "Financial Services"],
   images: [],
-  link: "https://canva.link/t9jxk5m2n0g58q1"
+  link: "https://drive.google.com/file/d/1xkxd1Ng2ZfOJ4RsR4hT4ornCnAAF1MtW/view?usp=sharing"
 },
 {
   title: "Talent System Audit & Blueprint at Company X",
@@ -817,7 +781,7 @@ const hrProjects = [
   outcome: "Delivered a 24-month blueprint projecting stronger succession depth in critical roles (from 1-2 to 2-3 ready successors), reduced external hiring, and an internal talent marketplace expected to be used by 70-80% of leaders within 2 years.",
   tags: ["Talent Management", "Succession Planning", "Internal Mobility", "Skills-Based Organization", "HR Strategy"],
   images: [],
-  link: "https://canva.link/muapcd3vfllxe41"
+  link: "https://drive.google.com/file/d/1yqMS52ZA5wKGBuVitCWznBpAQrlB_Bhe/view?usp=sharing"
 },
 {
     title: "Post-Founder Succession Analysis at Armani",
@@ -843,7 +807,7 @@ const hrProjects = [
     outcome: "Recommended 'Continuity with Structure': retaining Marsocci as CEO while formally documenting and distributing decision rights, introducing transparent role boundaries across senior leadership, and sequencing internal reforms over time, rather than a riskier transformational overhaul. Proposed a concrete roadmap covering leadership assessment and decision-rights documentation (Year 1), structured leadership development and board involvement (Years 1–3), and ongoing governance to embed succession planning into the organization permanently.",
     tags: ["Succession Planning", "Leadership Effectiveness", "Founder Transition", "Governance"],
     images: [],
-    link: "https://canva.link/haiiaiw320pif7p"
+    link: "https://drive.google.com/file/d/1AXm9YQFu-FxQQ1Xp8BLEAVXVkVvXMVkl/view?usp=sharing"
 },
 {
     title: "Global Mobility Redesign at Argento",
@@ -874,7 +838,7 @@ const hrProjects = [
     outcome: "Recommended board approval of Phase 1: mandating a Global Mobility COE, authorizing a dedicated COE lead hire, and commissioning the RACI and SLA framework. The redesign consolidates payroll from 5 vendors to 1, embeds 3 automated data-validation gateways into HRIS, and targets 0 double payments, 100% tax filing compliance, and full consolidation of all 105 assignees under the new model within 12 months, at a projected 24-month payback period and €118,000 net annual advantage over inaction from Year 2 onward.",
     tags: ["Process Redesign", "RACI", "HRIS", "Payroll Integration", "Governance", "ROI"],
     images: [],
-    link: "https://canva.link/z6arooft7kxvd27"
+    link: "https://drive.google.com/file/d/1BRLY9ROPgtTh_M6bs2NghW8K_AyZzhQK/view?usp=sharing"
 },
 {
     title: "Combined Leadership & Agile Delivery Program at DataEdge",
@@ -904,7 +868,7 @@ const hrProjects = [
     outcome: "Proposed a 7-week, cross-country leadership and agile delivery program targeting all 60 DataEdge managers, projected to lift formal manager training from 22% to 70%, reduce critical bugs per release from 18 to 12, cut product cycle time from 16 to 12 weeks, and shorten engineering onboarding from 10 to 7 weeks, at an estimated cost of roughly €360–€930 per manager depending on delivery scenario, tracked via pre/post capability self-assessments, quarterly engagement pulses, and monthly bug/cycle-time metrics.",
     tags: ["Leadership Development", "Agile Upskilling", "Manager Training", "Learning Needs Analysis", "Blended Learning", "Cohort Design"],
     images: [],
-    link: "https://canva.link/71uum8ldz97pv1a"
+    link: "https://drive.google.com/file/d/180NZxFx4lDMwJDOT5X-iZxz_hQmW4hRz/view?usp=sharing"
 },
 {
     title: "Incredisurance: A Human-AI Transformation Design for Claims Processing",
@@ -937,7 +901,7 @@ const hrProjects = [
     outcome: "Proposed an 18-month phased rollout (culture readiness and union engagement → EU AI Act compliance and bias audit → 50% agent deployment → full 6-country rollout) projected to cut average claims cycle time from 14 to 1.5 days, resolve 80% of claims autonomously within 4 hours, and deliver €36.86M in Year 3 cost savings against a €30M target (25% reduction, achieved ahead of schedule), against a €7.9M one-time and €750K annual ongoing investment, while committing to no forced redundancies in Year 1 and redeploying over 60% of affected staff into new AI-augmented roles.",
     tags: ["AI Transformation", "Workforce Redesign", "Change Management", "EU AI Act", "Union Relations", "Insurance", "AI Governance"],
     images: [],
-    link: "https://canva.link/0jrudfgmkmexywx"
+    link: "https://drive.google.com/file/d/1FKuHmvf2eKB-4ID_LhkfLwjEK3CBSZAI/view?usp=sharing"
 },
 {
     title: "Strategic Positioning for a Global Health & Wellbeing Function at Bank Co.",
@@ -968,7 +932,7 @@ const hrProjects = [
     outcome: "Proposed a global Health & Wellbeing function reporting through a CHRO-accountable governance model, launching in Q3 2026 with baseline diagnostics and downsizing-linked pilots, scaling through 2027–2028 into a global Wellbeing Ambassador network and Healthy Leadership program, and reaching full institutionalization by 2029 where wellbeing is embedded directly into performance management and leadership expectations. Success is tracked via manager effectiveness, Wellbeing Index score, voluntary attrition, and the cost of regrettable attrition in critical talent segments, directly tying the function's impact back to protecting the ROI of Bank Co.'s restructuring and digital transformation investments.",
     tags: ["Wellbeing Strategy", "Change Management", "Manager Enablement", "Hybrid Culture", "Organizational Design"],
     images: [],
-    link: "https://canva.link/uvn4zs8colh9z4d"
+    link: "https://drive.google.com/file/d/1Ln9fA13f1Ap5SzR7bBPCcwNrtl78_xf1/view?usp=sharing"
 },
 {
     title:"Transforming Talent Retention & Engagement at TechNova",
@@ -997,7 +961,7 @@ const hrProjects = [
     outcome:"Delivered a board-ready proposal recommending a $3.65M investment (8% of existing HR budget) across 6 initiatives, targeting a reduction in mid-career turnover from 35% to 20%, an engagement score increase from 62 to 72, and closing the pay gap vs. market from -10% to 0% — projected to avoid $8.6M in annual turnover costs by Year 3.",
     tags:["HR Strategy","Talent Retention","Employee Engagement","Compensation Analysis","Change Management","Business Case Development"],
     images:[],
-    link:"https://canva.link/pplwhdcf41eoxn6"
+    link:"https://drive.google.com/file/d/1kd_Eo5Gm1159G4a9VmnMCj3ifhfnLJsF/view?usp=sharing"
   },
   {
     title:"Scaling SE Digital India while Protecting Cultural Integration at SEIPL",
@@ -1028,7 +992,7 @@ const hrProjects = [
     outcome:"Recommended an embedded (not federated) Talent CoE model giving SEIPL's Country President continued sign-off on pay bands and cultural architecture, while granting SE Digital India its own sub-brand, dedicated recruiting campaign, and 20-25% pay premium. The plan targets 2,000 hires within 24 months, SEIPL engagement maintained at 78%+, internal attrition held below 6%, and 500 SEIPL employees upskilled in Year 1, funded by a ~32 Cr INR (3M EUR) recruiting budget.",
     tags:["Change Management","Organizational Design","Talent Acquisition","Culture Integration","M&A Integration","HR Operating Model","Employer Branding"],
     images:[],
-    link:"https://canva.link/blhkivai1qw83l1"
+    link:"https://drive.google.com/file/d/1GxgH_n09W99rmNr80pIEPUnse60UVFKc/view?usp=sharing"
   },
   {
     title:"Wellbeing Deep Dive and Action Plan for Sales Team",
@@ -1058,7 +1022,7 @@ const hrProjects = [
     outcome:"Presented a committee-ready action plan recommending a €65K–€107K investment in leadership transparency, manager coaching, and workload recalibration programs, projecting a 2.4x return multiple and 4.9-month payback period, with a net financial benefit of €183,842 in Year 1. Target outcomes include restoring the Values & Ethics Index above 7.0, sustaining positive eNPS, 100% core management coaching completion, and reducing voluntary attrition to the 13% industry benchmark.",
     tags:["Workplace Wellbeing","Employee Sentiment","Attrition Analysis","eNPS","ROI Modeling","Leadership Development","Culture & Trust"],
     images:[],
-    link:"https://canva.link/p5zcysflvk4s0ee"
+    link:"https://drive.google.com/file/d/1_yMnj0IcIvZu1xGmbILMNpbtgEJDB3id/view?usp=sharing"
   },
   {
     title:"Employee Relations & Conflict Resolution Plan for Innovex Italy",
@@ -1091,7 +1055,7 @@ const hrProjects = [
     outcome:"Delivered a board-ready crisis response plan structured around the STAR framework, recommending immediate protective measures for the 7 targeted individuals, a tiered communication rollout to Italy and global employees within 72 hours, mandatory manager training on psychological safety, and structural fixes including automated conflict-of-interest screening and a formal post-investigation whistleblower protection protocol. Success targets for 12 months post-crisis include a psychological safety score above 80%, 100% manager training completion, and voluntary turnover held below 10%.",
     tags:["Employee Relations","Conflict Resolution","Whistleblower Protection","Crisis Management","Root Cause Analysis","Crisis Communications","Change Management"],
     images:[],
-    link:"https://canva.link/npe0ns5obrz8sl7"
+    link:"https://drive.google.com/file/d/1dhJhSDo23Zwc1jCyz_T19N5AhE_v1YDl/view?usp=sharing"
   },
 {
     title:"Assessment Center Proposal for L&D Manager Role at FIFA",
@@ -1121,7 +1085,7 @@ const hrProjects = [
     outcome:"Delivered a fully designed, legally defensible assessment center proposal combining five simulation-based exercises and a structured scoring protocol, projected to reduce hiring risk, strengthen strategic alignment with FIFA's business cycles, and improve quality of hire by directly observing candidates' influence, adaptability, and business acumen in realistic job scenarios. The proposal included a complete 7-week rollout plan from framework finalization to pilot testing and launch.",
     tags:["Psychometrics","Assessment Center Design","Competency Modeling","Talent Selection","Validity & Fairness","BARS","Hiring Strategy"],
     images:[],
-    link:"https://canva.link/clbkd4whuiz8xao"
+    link:"https://drive.google.com/file/d/1PodNK91PpgE23D7dyXOc6iNUvYZRw4QI/view?usp=sharing"
   },
   {
     title:"AI-Powered L&D at Accenture",
@@ -1149,7 +1113,7 @@ const hrProjects = [
     outcome:"Produced a comprehensive strategic profile showing Accenture treating L&D as competitive infrastructure on par with R&D, achieving 96% AI & Data Practitioner goal progress, 79% Gen AI-trained workforce, and over 50 Brandon Hall HCM Excellence Awards in 2024, underpinned by a unified AI-native learning platform and a blended internal/external partner ecosystem.",
     tags:["AI Skilling","Workforce Transformation","L&D Strategy","Benchmarking","Talent Development"],
     images:[],
-    link:"https://canva.link/00z0331e9kaueid"
+    link:"https://drive.google.com/file/d/1GcHKkrnsdDekIiFe00J7GGqzx4Je5Anr/view?usp=sharing"
   },
   {
     title:"Increasing Total Shareholder Return at Coca-Cola",
@@ -1174,7 +1138,7 @@ const hrProjects = [
     outcome:"Delivered a set of 3 strategic recommendations, forming snack-industry alliances, pursuing an alcoholic-beverage acquisition and separation, and scaling storytelling-based marketing, projected to drive TSR growth through diversified revenue streams, improved margins, and stronger brand loyalty.",
     tags:["Finance", "TSR", "Corporate Strategy", "Benchmarking"],
     images:[],
-    link:"https://docs.google.com/presentation/d/1JIbLWU_soB0hnV93OkWW16KQcc_ohJgwkF0XYAGMFyE/edit?usp=sharing"
+    link:"https://drive.google.com/file/d/1eEdMbPFEh4PkHwoxlqWMx7qpvCykTWnP/view?usp=sharing"
   },
 {
     title:"Falabella's Retail Unit Analysis in Colombia",
@@ -1200,7 +1164,7 @@ const hrProjects = [
     outcome:"Recommended closing the Colombia/Peru growth gap by acquiring a Bogotá-based digital product team, building a centralized CMR personalization platform, borrowing scalable cloud and agile transformation capacity, and bridging the gap by upskilling store leaders and transferring Peru's omnichannel playbook to Colombia.",
     tags:["Workforce Planning", "Organizational Design", "Talent Strategy", "Build-Buy-Borrow-Bridge"],
     images:[],
-    link:"https://docs.google.com/presentation/d/1UkUgUBwdprv-dorRwy2HdlBLXH2p0h5xRUmfTwye_cM/edit?usp=sharing"
+    link:"https://drive.google.com/file/d/1t27xCpgQ_NHJlgoVX6RJGCtDjhXivbEb/view?usp=sharing"
   },
   {
     title:"From Learning to Behavior Change: Making GenAI Stick (and Why We Resist)",
@@ -1254,7 +1218,7 @@ const hrProjects = [
     outcome:"Concluded with a concrete, ongoing behavioral commitment to counteract AI-driven cognitive surrender, prioritizing independent thinking and team deliberation before AI consultation, and a sharpened point of view on the limits of AI replacing human judgment in HR.",
     tags:["AI in HR", "Future of Work", "Critical Thinking", "AI Ethics", "Organizational Change", "Self-Reflection"],
     images:[],
-    link:"https://docs.google.com/document/d/1lDoJN9a_ImuWQfBotRI28Bxn60LQsF6JoFdhgFrzJ_E/edit?usp=sharing"
+    link:"https://drive.google.com/file/d/1DUTtKishcAv9clZTzoE4XBhDOlOrpPNN/view?usp=sharing"
   },
   {
     title:"Navigating Digital Workplace Paradoxes",
@@ -1279,7 +1243,7 @@ const hrProjects = [
     outcome:"Concluded that awareness of digital workplace paradoxes, paired with intentional strategies like tailoring communication to individual working styles and respecting work-life boundaries, empowers professionals and leaders to build more productive and balanced remote work environments.",
     tags:["Digital Workplace", "Remote Work", "Autonomy Paradox", "Organizational Behavior", "Work-Life Balance"],
     images:[],
-    link:"https://docs.google.com/document/d/1yNqqJ4783lCH7FKEMXfpJgck5AG13iH8aOGoUjAmZHk/edit?usp=sharing"
+    link:"https://drive.google.com/file/d/1DsZgwPiTKtBakkMEecJHGkpHn-mDS4An/view?usp=sharing"
   },
   {
     title:"Strategic Growth in the Attention Economy: WWE vs. Wimbledon",
@@ -1305,7 +1269,7 @@ const hrProjects = [
     outcome:"Concluded that despite differing ownership structures, audiences, and economic logics, both organizations sustain competitive advantage and cultural relevance through internationalization, strategic media partnerships, and disciplined differentiation, offering a transferable lens for evaluating growth strategy in attention-driven industries.",
     tags:["Business Strategy", "Strategy Diamond", "Shared Value", "Competitive Advantage", "Internationalization"],
     images:[],
-    link:"https://docs.google.com/document/d/1k32mEycxapPHs9nibRFGKD2u5lyF46Kr0ooaIbmYc4o/edit?usp=sharing"
+    link:"https://drive.google.com/file/d/1JZDNt87qNFq1DpuqNhm2VojmgUbG0nem/view?usp=sharing"
   },
   {
     title:"Redundancy Process Workflow ",
@@ -1332,7 +1296,7 @@ const hrProjects = [
     outcome:"Delivered a clear, auditable end-to-end redundancy process that defines ownership at every step, builds in compliance checkpoints before employee notification, and coordinates Payroll and IT offboarding tasks in parallel to minimize delays and ensure a consistent employee experience.",
     tags:["HR Operations", "Process Design", "HRIS", "Offboarding", "Workflow Mapping", "Compliance"],
     images:[],
-    link:"https://drive.google.com/file/d/1kpCwkLHtRj2NiueoqlPmpmFAfxAO1P6E/view?usp=sharing"
+    link:"https://drive.google.com/file/d/1gQdWDL8YJ8K8r9JNVEOp5uDfDcdx1kAL/view?usp=sharing"
   },
 {
   title:"Unlocking Restaurant Performance Through Data",
@@ -1358,7 +1322,7 @@ const hrProjects = [
   outcome:"All 3 initial hypotheses were disproven by the data, redirecting strategy: shift length (not emotional intelligence or managerial tenure/pay) was the strongest driver of performance. Recommendations to shorten shifts, re-engineer hiring around 'Taskmaster' cognitive traits, and redesign variable pay around operational KPIs were projected to generate $600K–$800K in annual cost avoidance and unlock 8–12 additional orders per hour per store across a 280-store network.",
   tags:["People Analytics", "Regression Modeling", "Workforce Planning", "Talent Acquisition", "Data-Driven HR"],
   images:[],
-  link:"https://drive.google.com/file/d/1a7k1XlXeHW7zSnIq_snpbPLdkf5K-75w/view?usp=sharing"
+  link:"https://drive.google.com/file/d/1uUanrB4yHJ0D-OQh572J-AH1WqHuEdD6/view?usp=sharing"
 },
 {
   title:"Optimizing Visa Resolution Dynamics",
