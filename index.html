@@ -1156,7 +1156,7 @@ const hrProjects = [
     title:"Increasing Total Shareholder Return at Coca-Cola",
     client:"Finance for HR",
     role:"Group Project",
-    category:"Finance",
+    category:["Finance", "Corporate Strategy"],
     featured:false,
     summary:"A benchmarking analysis identifying best-in-class strategic moves from FMCG competitors (PepsiCo, Keurig Dr Pepper, and Red Bull) and translating them into actionable recommendations for The Coca-Cola Company to increase Total Shareholder Return (TSR).",
     challenge:"Coca-Cola, as a mature market leader, faces the challenge of sustaining top-line and bottom-line growth in a highly competitive FMCG landscape. The project required identifying proven value-creation strategies from industry peers and adapting them to Coca-Cola's unique brand portfolio and market position.",
@@ -1455,13 +1455,16 @@ function sortKey(p){
 function metaLine(parts){
   return parts.filter(Boolean).join(" · ");
 }
+function catArr(cat){
+  return Array.isArray(cat) ? cat : [cat];
+}
 
 /* ---------- shared card + wiring ---------- */
 function cardHTML(p){
   return `
     <article class="card" tabindex="0" data-i="${allProjects.indexOf(p)}" role="button" aria-label="Open ${p.title}">
       ${p.featured?'<span class="star" title="Featured"><svg width="18" height="18" fill="currentColor"><path d="M9 1l2.3 4.7 5.2.8-3.8 3.6.9 5.1L9 12.9 4.4 15.3l.9-5.1L1.5 6.5l5.2-.8z"/></svg></span>':''}
-      <span class="cat">${p.category}</span>
+      <span class="cat">${catArr(p.category).join(" · ")}</span>
       <h3>${p.title}</h3>
       <div class="client">${metaLine([p.client, p.role, dateRange(p)])}</div>
       <p class="sum">${p.summary}</p>
@@ -1491,7 +1494,7 @@ const countEl=document.getElementById('count');
 const chipsEl=document.getElementById('chips');
 const searchEl=document.getElementById('search');
 
-const cats=["All",...Array.from(new Set(hrProjects.map(p=>p.category))).sort((a,b)=>a.localeCompare(b))];
+const cats=["All",...Array.from(new Set(hrProjects.flatMap(p=>catArr(p.category)))).sort((a,b)=>a.localeCompare(b))];
 chipsEl.innerHTML=cats.map(c=>`<button class="chip${c==='All'?' active':''}" data-cat="${c}">${c}</button>`).join("");
 chipsEl.querySelectorAll('.chip').forEach(ch=>{
   ch.addEventListener('click',()=>{
@@ -1506,8 +1509,8 @@ searchEl.addEventListener('input',render);
 function render(){
   const q=searchEl.value.trim().toLowerCase();
   let list=hrProjects.filter(p=>{
-    const catOk=activeCat==="All"||p.category===activeCat;
-    const hay=(p.title+" "+p.client+" "+(p.sector||"")+" "+p.summary+" "+p.tags.join(" ")+" "+p.category).toLowerCase();
+    const catOk=activeCat==="All"||catArr(p.category).includes(activeCat);
+    const hay=(p.title+" "+p.client+" "+(p.sector||"")+" "+p.summary+" "+p.tags.join(" ")+" "+catArr(p.category).join(" ")).toLowerCase();
     return catOk && (q===""||hay.includes(q));
   });
   list.sort((a,b)=> a.title.localeCompare(b.title));
@@ -1527,7 +1530,7 @@ const modal=document.getElementById('modal');
 function openModal(p){
   modal.innerHTML=`
     <button class="close" aria-label="Close" onclick="closeModal()">×</button>
-    <span class="cat">${p.category}</span>
+    <span class="cat">${catArr(p.category).join(" · ")}</span>
     <h2>${p.title}</h2>
     <div class="meta">${metaLine([p.client, p.role, dateRange(p)])}</div>
     <h4>The challenge</h4><p>${p.challenge}</p>
